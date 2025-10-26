@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@layer base {
+  html {
+    @apply bg-cream;
+  }
+  @theme {
+    --color-sage: #e7f9d1;
+    --color-cream: #fff5e2;
+    --color-blue: #b2dcff;
+    --color-salmon: #f8957e;
+    --color-white: #fff6ef;
+    --color-black: #0c0c0d;
+  }
+}

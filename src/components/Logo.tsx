@@ -1,0 +1,51 @@
+const Logo = () => {
+  return (
+    <div className="h-16 w-16 pl-8">
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_513_1751)">
+          <path
+            d="M6 22H13V17H19V12H26"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M25 4H7C6.44772 4 6 4.44772 6 5V27C6 27.5523 6.44772 28 7 28H25C25.5523 28 26 27.5523 26 27V5C26 4.44772 25.5523 4 25 4Z"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M13 22H26"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M19 17H26"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_513_1751">
+            <rect width="32" height="32" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+};
+
+export default Logo;
