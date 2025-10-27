@@ -1,6 +1,8 @@
+import ShuffleLogo from "./assets/icons/Shuffle";
+import WrenchLogo from "./assets/icons/Wrench";
 import Header from "./components/Header";
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />
@@ -12,9 +14,15 @@ function App() {
           {" "}
           Explore real career paths and see what feels right for you
         </h2>
-        <div className="flex gap-5 justify-center mt-5 mb-25 font-inter text-[16px] font-light">
-          <button>Explore Careers</button>
-          <button className="bg-salmon text-white">Start My Dashboard</button>
+        <div className="flex gap-3.5 justify-center mt-5 mb-25 font-inter text-[16px] font-light">
+          <button className="bg-white pt-3 pr-3 pl-3 pb-2 rounded-lg flex gap-2">
+            <ShuffleLogo />
+            <span className="mb-1 pr-1">Explore Careers</span>
+          </button>
+          <button className="bg-salmon text-white pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2">
+            <WrenchLogo />
+            <span className="mt-1.5">Start My Dashboard</span>
+          </button>
         </div>
       </div>
       <div className="bg-blue flex justify-center p-13 gap-8">
@@ -23,6 +31,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;
