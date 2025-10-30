@@ -13,7 +13,7 @@ const NavBar = () => {
         About
       </NavLink>
       <NavLink to="/dashboard">
-        <button className="bg-salmon mb-9 pt-1 pr-8 pl-7 pb-1 rounded text-white">
+        <button className="bg-salmon-gradient mb-9 pt-1 pr-8 pl-7 pb-1 rounded text-white">
           My Dashboard
         </button>
       </NavLink>

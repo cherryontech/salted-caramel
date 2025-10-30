@@ -4,7 +4,7 @@ const WrenchLogo = () => {
       <svg
         width="20"
         height="33"
-        viewBox="0 0 32 32"
+        viewBox="0 0 32 27"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

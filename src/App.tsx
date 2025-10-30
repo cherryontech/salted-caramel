@@ -19,13 +19,13 @@ const App = () => {
             <ShuffleLogo />
             <span className="mb-1 pr-1">Explore Careers</span>
           </button>
-          <button className="bg-salmon text-white pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2">
+          <button className="bg-salmon-gradient text-white pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2">
             <WrenchLogo />
             <span className="mt-1.5">Start My Dashboard</span>
           </button>
         </div>
       </div>
-      <div className="bg-blue flex justify-center p-13 gap-8">
+      <div className="bg-blue-gradient flex justify-center p-13 gap-8">
         <img className="h-80 w-120" src="test.jpg" alt="media1" />
         <img className="h-80 w-120" src="test.jpg" alt="media2" />
       </div>
