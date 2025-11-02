@@ -1,1 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
 @import "tailwindcss";
+
+@layer base {
+  html {
+    @apply bg-cream;
+  }
+  @theme {
+    --color-sage: #e7f9d1;
+    --color-cream: #fff5e2;
+    --color-blue: #b2dcff;
+    --color-salmon: #f8957e;
+    --color-white: #fffcf5;
+    --color-black: #0c0c0d;
+    --color-neutralblack: #3e3e3e;
+    --font-nunito: Nunito Sans, "sans-serif";
+    --font-inter: Inter, "sans-serif";
+
+    --gradient-sage: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15)
+      ),
+      linear-gradient(0deg, var(--color-sage), var(--color-sage));
+
+    --gradient-blue: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1)
+      ),
+      linear-gradient(0deg, var(--color-blue), var(--color-blue));
+
+    --gradient-salmon: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1)
+      ),
+      linear-gradient(0deg, var(--color-salmon), var(--color-salmon));
+  }
+}
+@utility bg-sage-gradient {
+  background-image: var(--gradient-sage);
+}
+@utility bg-blue-gradient {
+  background-image: var(--gradient-blue);
+}
+@utility bg-salmon-gradient {
+  background-image: var(--gradient-salmon);
+}
