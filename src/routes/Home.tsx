@@ -1,4 +1,3 @@
-import React from "react";
 import ShuffleIcon from "../assets/icons/Shuffle";
 import WrenchIcon from "../assets/icons/Wrench";
 import { NavLink } from "react-router-dom";

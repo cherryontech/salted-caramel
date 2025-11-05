@@ -1,4 +1,3 @@
-import React from "react";
 import ToolsIcon from "../assets/icons/Tools";
 
 const Developing = () => {

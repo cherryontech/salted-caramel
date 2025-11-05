@@ -1,4 +1,3 @@
-import React from "react";
 import Developing from "./Developing";
 
 const About = () => {

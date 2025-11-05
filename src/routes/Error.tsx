@@ -1,4 +1,3 @@
-import React from "react";
 import GearIcon from "../assets/icons/Gear";
 
 const Error = () => {
