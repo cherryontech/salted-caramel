@@ -1,7 +1,12 @@
 import React from "react";
+import Developing from "./Developing";
 
 const Community = () => {
-  return <div>Community</div>;
+  return (
+    <div>
+      <Developing />
+    </div>
+  );
 };
 
 export default Community;

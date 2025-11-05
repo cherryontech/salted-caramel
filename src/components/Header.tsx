@@ -8,7 +8,7 @@ const Header = () => {
       <header className="sticky mx-auto flex w-full justify-content">
         <NavLink to="/" className="flex">
           <Logo />
-          <span className="font-nunito font-bold ml-2 mt-1 whitespace-nowrap">
+          <span className="font-nunito font-bold ml-2 whitespace-nowrap text-[20px]">
             {" "}
             All Roads
           </span>
