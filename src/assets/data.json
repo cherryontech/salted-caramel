@@ -1,0 +1,29 @@
+{
+  "fields": [
+    {
+      "id": 1,
+      "icon": "pen",
+      "title": "Web Design",
+      "description": "Research, plan, and improve websites and apps based on user needs.",
+      "specializations": []
+    },
+    {
+      "id": 2,
+      "icon": "compass",
+      "title": "Product Management",
+      "description": "Lead product strategy and execution, turning ideas into real customer solutions."
+    },
+    {
+      "id": 3,
+      "icon": "code",
+      "title": "Software Developer",
+      "description": "Design, program, build, deploy and maintain software using many different skills and tools."
+    },
+    {
+      "id": 4,
+      "icon": "upload",
+      "title": "Content Developer",
+      "description": "Develop the actual content that people see on websites and print materials."
+    }
+  ]
+}

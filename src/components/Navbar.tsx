@@ -3,9 +3,6 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav className="flex justify-end gap-6 w-full pr-10 font-inter text-[16px] font-light">
-      <NavLink to="/" className="mb-9 pt-1 pb-1">
-        Home
-      </NavLink>
       <NavLink to="/community" className="mb-9 pt-1 pb-1">
         Community
       </NavLink>

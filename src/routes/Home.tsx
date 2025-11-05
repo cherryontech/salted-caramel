@@ -1,6 +1,6 @@
 import React from "react";
-import ShuffleLogo from "../assets/icons/Shuffle";
-import WrenchLogo from "../assets/icons/Wrench";
+import ShuffleIcon from "../assets/icons/Shuffle";
+import WrenchIcon from "../assets/icons/Wrench";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -17,13 +17,13 @@ const Home = () => {
         <div className="flex gap-3.5 justify-center mt-5 mb-25 font-inter text-[16px] font-light">
           <NavLink to="/roadmaps">
             <button className="bg-white pt-3 pr-3 pl-3 pb-2 rounded-lg flex gap-2">
-              <ShuffleLogo />
+              <ShuffleIcon />
               <span className="mb-1 pr-1">Explore Careers</span>
             </button>
           </NavLink>
           <NavLink to="/dashboard">
             <button className="bg-salmon-gradient text-white pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2">
-              <WrenchLogo />
+              <WrenchIcon />
               <span className="mt-1.5">Start My Dashboard</span>
             </button>
           </NavLink>

@@ -1,4 +1,4 @@
-const WrenchLogo = () => {
+const WrenchIcon = () => {
   return (
     <div>
       <svg
@@ -20,4 +20,4 @@ const WrenchLogo = () => {
   );
 };
 
-export default WrenchLogo;
+export default WrenchIcon;
