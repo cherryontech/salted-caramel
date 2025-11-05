@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Data from "../assets/data.json";
 import PenIcon from "../assets/icons/Pen";
 import CompassIcon from "../assets/icons/Compass";
@@ -15,7 +16,7 @@ const iconMap: Record<IconName, React.FC> = {
 
 const Roadmaps = () => {
   return (
-    <div className="ml-12 mr-12 mt-5 min-w-1 fixed">
+    <div className="max-w-5xl mx-auto mt-12 px-6">
       <h1 className="text-[55px] font-extrabold font-nunito text-neutralblack">
         {" "}
         Explore career roadmaps
@@ -25,29 +26,29 @@ const Roadmaps = () => {
         Start discovering the paths that lead to where you want to be{" "}
       </p>
 
-      <div className="p-10 grid grid-cols-2 gap-5 place-content-center ml-15">
-        {Data.fields &&
-          Data.fields.map((field) => {
-            const IconComponent = iconMap[field.icon as IconName];
-            return (
-              <div
-                className="p-4 border border-gray-400 rounded-md w-90 h-30"
-                key={field.id}
-              >
-                <div className="flex gap-4">
-                  {IconComponent && <IconComponent />}
-                  <strong className="text-[18px] font-nunito whitespace-nowrap">
-                    {field.title}
-                  </strong>{" "}
+      <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-10 place-items-center">
+        {Data.fields.map((field) => {
+          const IconComponent = iconMap[field.icon as IconName];
+          return (
+            <li key={field.id}>
+              <NavLink to={`/details/${field.id}`}>
+                <div className="p-3 border border-gray-400 rounded-md w-full max-w-md ml-10">
+                  <div className="flex gap-4 items-center mt-2 ml-2">
+                    {IconComponent && <IconComponent />}
+                    <strong className="text-[18px] font-nunito">
+                      {field.title}
+                    </strong>{" "}
+                  </div>
+                  <p className="font-inter ml-12 mb-3 text-[14.8px]">
+                    {field.description}
+                  </p>
                 </div>
-                {/* <br /> */}
-                <p className="font-inter ml-10 mb-6 text-[14.8px]">
-                  {field.description}
-                </p>
-              </div>
-            );
-          })}
-      </div>
+              </NavLink>
+            </li>
+          );
+        })}
+      </ul>
+
       <br />
       <p className="text-center font-inter font-medium text-[20px]">
         {" "}
