@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-end gap-6 w-full pr-10 font-inter text-[16px] font-light">
+    <nav className="flex justify-end gap-6 w-full pr-10 font-inter text-[16px] font-light">
       <NavLink to="/community" className="mb-9 pt-1 pb-1">
         Community
       </NavLink>
@@ -17,7 +17,7 @@ const NavBar = () => {
           My Dashboard
         </button>
       </NavLink>
-    </div>
+    </nav>
   );
 };
 export default NavBar;
