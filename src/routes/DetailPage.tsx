@@ -4,6 +4,7 @@ import BarIcon from "../assets/icons/Bar";
 import ClockIcon from "../assets/icons/Clock";
 import DollarSignIcon from "../assets/icons/DollarSign";
 import HouseIcon from "../assets/icons/House";
+import ArrowIcon from "../assets/icons/Arrow";
 
 interface Specialization {
   image: string;
@@ -158,7 +159,34 @@ const DetailPage = () => {
           {" "}
           Common Pathways
         </h2>
-        <p> tentative content area with the pathways</p>
+        <div className="grid grid-cols-2 gap-x-15 gap-y-9 p-15">
+          {item.pathways.map((data) => {
+            return (
+              <div
+                key={data.type}
+                className="p-3 border border-gray-400 rounded-md w-sm max-w-sm flex gap-5 bg-white"
+              >
+                <div className="float-right">
+                  <h3 className="text-[24px] font-medium font-nunito mb-4">
+                    {data.type}
+                  </h3>
+                  <ul>
+                    {data.milestones.map((milestone, index) => (
+                      <li key={index}>
+                        <span className="flex items-center gap-5 font-inter text-[16px]">
+                          {" "}
+                          <ArrowIcon />
+                          {milestone}
+                        </span>
+                        <br />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       <div> Build my dashboard button here</div>
