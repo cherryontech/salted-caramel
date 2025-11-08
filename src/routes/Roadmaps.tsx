@@ -4,6 +4,7 @@ import PenIcon from "../assets/icons/Pen";
 import CompassIcon from "../assets/icons/Compass";
 import CodeIcon from "../assets/icons/Code";
 import UploadIcon from "../assets/icons/Upload";
+import Footer from "../components/Footer";
 
 type IconName = "upload" | "compass" | "pen" | "code";
 
@@ -54,6 +55,8 @@ const Roadmaps = () => {
         {" "}
         More career roadmaps coming soon!
       </p>
+
+      <Footer/>
     </div>
   );
 };

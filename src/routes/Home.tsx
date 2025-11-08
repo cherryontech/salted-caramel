@@ -1,5 +1,6 @@
 import ShuffleIcon from "../assets/icons/Shuffle";
 import WrenchIcon from "../assets/icons/Wrench";
+import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
         <img className="h-80 w-120" src="test.jpg" alt="media1" />
         <img className="h-80 w-120" src="test.jpg" alt="media2" />
       </div>
+      <Footer/>
     </>
   );
 };
