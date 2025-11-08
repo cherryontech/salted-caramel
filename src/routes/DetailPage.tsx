@@ -1,5 +1,136 @@
+import { useParams } from "react-router-dom";
+import Data from "../assets/data.json";
+
+interface Specialization {
+  image: string;
+  name: string;
+  description: string;
+}
+
+interface Pathway {
+  type: string;
+  milestones: string[];
+}
+
+interface Field {
+  id: number;
+  icon: string;
+  title: string;
+  description: string;
+  salaryRange: string;
+  learningCurve: string;
+  remotePercent: string;
+  growthRate: string;
+  technicalSkills: string[];
+  softSkills: string[];
+  specializations: Specialization[];
+  pathways: Pathway[];
+}
+
+interface DataFile {
+  fields: Field[];
+}
+const typedData = Data as DataFile;
+
 const DetailPage = () => {
-  return <div>DetailPage</div>;
+  const { id } = useParams<{ id: string }>();
+  const numericId = Number(id);
+
+  // getting images
+  const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
+    eager: true,
+  });
+  const getImageSrc = (filename: string) => {
+    const path = `/src/assets/photos/${filename}`;
+    const imageModule = images[path] as { default: string } | undefined;
+    return imageModule?.default || "";
+  };
+
+  const item = typedData.fields.find((field) => field.id === numericId);
+
+  if (!item) {
+    return <div> Item not found</div>;
+  }
+
+  return (
+    <div className="max-w-5xl mx-auto mt-12">
+      <h1 className="text-[55px] font-extrabold font-nunito whitespace-nowrap">
+        Career roadmap for {item.title}
+      </h1>
+      <p className="mt-10 text-[20px] font-medium font-nunito">
+        {item.description}
+      </p>
+
+      <section>
+        <h2 className="mt-10 text-[36px] font-medium font-nunito">
+          {" "}
+          Specializations & sub-fields
+        </h2>
+
+        <div className="p-8 grid grid-cols-1 sm:grid-cols-2 gap-x-15">
+          {item.specializations.map((data) => {
+            return (
+              <div
+                key={data.name}
+                className="p-3 border border-gray-400 rounded-md flex gap-5"
+              >
+                <img
+                  src={data.image ? getImageSrc(data.image) : ""}
+                  alt={data.image}
+                  className="mb-3 object-cover h-40 w-45"
+                />
+                <div className="float-right">
+                  <h3 className="text-[24px] font-medium font-nunito">
+                    {data.name}
+                  </h3>
+                  <p className="font-inter text-[16px] font-light">
+                    {" "}
+                    {data.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section>
+        <h2 className="mt-10 text-[36px] font-medium font-nunito">
+          {" "}
+          Career Snapshot
+        </h2>
+        <p> tentative content area with salary info etc</p>
+      </section>
+
+      <section>
+        <h2 className="mt-10 text-[36px] font-medium font-nunito">
+          {" "}
+          Key Skills and core competencies
+        </h2>
+        <p> tentative content skills</p>
+      </section>
+
+      <section>
+        <h2 className="mt-10 text-[36px] font-medium font-nunito">
+          {" "}
+          Common Pathways
+        </h2>
+        <p> tentative content area with the pathways</p>
+      </section>
+
+      <div> Build my dashboard button here</div>
+
+      <section>
+        <h2 className="mt-10 text-[36px] font-medium font-nunito">
+          {" "}
+          What other [career name] say about this career
+        </h2>
+        <p> tentative quotes from these users</p>
+      </section>
+
+      <div> explore more careers button here</div>
+    </div>
+  );
 };
 
 export default DetailPage;
