@@ -132,11 +132,25 @@ const DetailPage = () => {
       </section>
 
       <section>
-        <h2 className="mt-10 text-[36px] font-medium font-nunito">
+        <h2 className="mt-18 text-[36px] font-medium font-nunito">
           {" "}
           Key Skills and core competencies
         </h2>
-        <p> tentative content skills</p>
+
+        <div className="mt-13 grid grid-cols-3 gap-x-15 gap-y-15 pl-18">
+          {[...item.technicalSkills, ...item.softSkills].map((skill, index) => (
+            <div key={index} className="flex flex-col">
+              <span className="text-gray-500 font-light font-nunito text-[20px]">
+                {index < item.technicalSkills.length
+                  ? "Technical Skill"
+                  : "Soft Skill"}
+              </span>
+              <p className="font-nunito text-[22px] font-bold text-neutralblack">
+                {skill}
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section>
