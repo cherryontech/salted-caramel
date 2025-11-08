@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Data from "../assets/data.json";
 import BarIcon from "../assets/icons/Bar";
 import ClockIcon from "../assets/icons/Clock";
 import DollarSignIcon from "../assets/icons/DollarSign";
 import HouseIcon from "../assets/icons/House";
 import ArrowIcon from "../assets/icons/Arrow";
+import WrenchIcon from "../assets/icons/Wrench";
+import ShuffleIcon from "../assets/icons/Shuffle";
 
 interface Specialization {
   image: string;
@@ -189,17 +192,32 @@ const DetailPage = () => {
         </div>
       </section>
 
-      <div> Build my dashboard button here</div>
+      <div className="flex justify-center text-neutralblack mr-9">
+        {" "}
+        <NavLink to="/dashboard">
+          <button className="bg-blue-gradient pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2">
+            <WrenchIcon />
+            <span className="mt-1.5">Build My Dashboard</span>
+          </button>
+        </NavLink>
+      </div>
 
       <section>
         <h2 className="mt-10 text-[36px] font-medium font-nunito">
           {" "}
-          What other [career name] say about this career
+          In Progress
         </h2>
-        <p> tentative quotes from these users</p>
+        <p></p>
       </section>
 
-      <div> explore more careers button here</div>
+      <div className="flex justify-center text-neutralblack mr-9">
+        <NavLink to="/roadmaps">
+          <button className="bg-blue-gradient pt-3 pr-3 pl-3 pb-2 rounded-lg flex gap-2">
+            <ShuffleIcon />
+            <span className="mb-1 pr-1">Explore More Careers</span>
+          </button>
+        </NavLink>
+      </div>
     </div>
   );
 };
