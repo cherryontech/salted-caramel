@@ -1,5 +1,9 @@
 import { useParams } from "react-router-dom";
 import Data from "../assets/data.json";
+import BarIcon from "../assets/icons/Bar";
+import ClockIcon from "../assets/icons/Clock";
+import DollarSignIcon from "../assets/icons/DollarSign";
+import HouseIcon from "../assets/icons/House";
 
 interface Specialization {
   image: string;
@@ -95,11 +99,36 @@ const DetailPage = () => {
       </section>
 
       <section>
-        <h2 className="mt-10 text-[36px] font-medium font-nunito">
+        <h2 className="mt-10 text-[36px] font-medium font-nunito mb-15">
           {" "}
           Career Snapshot
         </h2>
-        <p> tentative content area with salary info etc</p>
+        <ul className="flex items-center gap-7 text-neutralblack">
+          <li className="bg-sage-gradient p-8 border border-gray-400 rounded-sm w-60 h-38">
+            <DollarSignIcon />
+            <strong className="ml-4.5 font-extrabold text-[20px] whitespace-nowrap">
+              {item.salaryRange}
+            </strong>
+            <p className="ml-8">Salary Range</p>
+          </li>
+          <li className="bg-sage-gradient p-8 border border-gray-400 rounded-sm w-60 h-38">
+            <ClockIcon />
+            <strong className="ml-11 font-extrabold text-[20px]">
+              {item.learningCurve}
+            </strong>
+            <p className="ml-8.5">Learning Curve</p>
+          </li>
+          <li className="bg-sage-gradient p-8 border border-gray-400 rounded-sm w-60 h-38">
+            <HouseIcon />
+            <strong className="ml-6.5 font-extrabold text-[20px] whitespace-nowrap">{`${item.remotePercent} Remote`}</strong>
+            <p className="ml-13">Flexibility</p>
+          </li>
+          <li className="bg-sage-gradient p-8 border border-gray-400 rounded-sm w-60 h-38">
+            <BarIcon />
+            <strong className="ml-15 font-extrabold text-[20px]">{`+${item.growthRate}`}</strong>
+            <p className="ml-5">New jobs in 2025</p>
+          </li>
+        </ul>
       </section>
 
       <section>
