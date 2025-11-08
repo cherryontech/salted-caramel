@@ -3,6 +3,15 @@ import WrenchIcon from "../assets/icons/Wrench";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
+  const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
+    eager: true,
+  });
+  const getImageSrc = (filename: string) => {
+    const path = `/src/assets/photos/${filename}`;
+    const imageModule = images[path] as { default: string } | undefined;
+    return imageModule?.default || "";
+  };
+
   return (
     <>
       <div className="text-center mt-30">
@@ -21,16 +30,24 @@ const Home = () => {
             </button>
           </NavLink>
           <NavLink to="/dashboard">
-            <button className="bg-salmon-gradient text-white pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2">
+            <button className="bg-blue-gradient text-black pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2">
               <WrenchIcon />
               <span className="mt-1.5">Start My Dashboard</span>
             </button>
           </NavLink>
         </div>
       </div>
-      <div className="bg-blue-gradient flex justify-center p-13 gap-8">
-        <img className="h-80 w-120" src="test.jpg" alt="media1" />
-        <img className="h-80 w-120" src="test.jpg" alt="media2" />
+      <div className="bg-salmon-gradient flex justify-center p-13 gap-8">
+        <img
+          className="h-80 w-120"
+          src={getImageSrc("Image-14.png")}
+          alt="Group of four professional dressed women giving each a collective high five"
+        />
+        <img
+          className="h-80 w-120"
+          src={getImageSrc("Image-15.png")}
+          alt="Group of six multiracial women sitting around a table with laptops out with big smiles on their faces"
+        />
       </div>
     </>
   );
