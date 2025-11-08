@@ -18,22 +18,22 @@
       ],
       "specializations": [
         {
-          "image": "test.png",
+          "image": "Image-20.png",
           "name": "UX Designer",
           "description": "Uses the full design thinking framework, designs the way a website or service flows to make it as intuitive as possible for users."
         },
         {
-          "image": "test.png",
+          "image": "Image-21.png",
           "name": "UI Designer",
           "description": "Focuses on making a great interface - what people see and do on a website."
         },
         {
-          "image": "test.png",
+          "image": "Image-22.png",
           "name": "UX Researcher",
           "description": "Understands user needs to shape a new product, and improve it through testing and iteration with users."
         },
         {
-          "image": "test.png",
+          "image": "Image-23.png",
           "name": "Visual Designer",
           "description": "Specializes in graphics, icons, logos, branding, animation, and other media that make a user experience compelling and unified."
         }
@@ -98,22 +98,22 @@
       ],
       "specializations": [
         {
-          "image": "test.png",
+          "image": "Image-16.png",
           "name": "Product Management",
           "description": "Leads cross-functional teams to design, build & launch great products."
         },
         {
-          "image": "test.png",
+          "image": "Image-17.png",
           "name": "Technical Product Management",
           "description": "Aligns engineering execution with product vision and business outcomes."
         },
         {
-          "image": "test.png",
+          "image": "Image-18.png",
           "name": "AI / ML Product Management",
           "description": "Builds and launches intelligent, data-powered products using AI and machine learning."
         },
         {
-          "image": "test.png",
+          "image": "Image-19.png",
           "name": "Cloud / Infrastructure Product Management",
           "description": "Manages large-scale cloud, data, and platform products supporting global customer needs."
         }
