@@ -195,24 +195,24 @@ const DetailPage = () => {
       <div className="flex justify-center text-neutralblack mr-9">
         {" "}
         <NavLink to="/dashboard">
-          <button className="bg-blue-gradient pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2">
+          <button className="bg-blue-gradient pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2 mb-15">
             <WrenchIcon />
             <span className="mt-1.5">Build My Dashboard</span>
           </button>
         </NavLink>
       </div>
-
+      {/* 
       <section>
         <h2 className="mt-10 text-[36px] font-medium font-nunito">
           {" "}
           In Progress
         </h2>
         <p></p>
-      </section>
+      </section> */}
 
       <div className="flex justify-center text-neutralblack mr-9">
         <NavLink to="/roadmaps">
-          <button className="bg-blue-gradient pt-3 pr-3 pl-3 pb-2 rounded-lg flex gap-2">
+          <button className="bg-blue-gradient pt-3 pr-3 pl-3 pb-2 rounded-lg flex gap-2 mb-15">
             <ShuffleIcon />
             <span className="mb-1 pr-1">Explore More Careers</span>
           </button>
