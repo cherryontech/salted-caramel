@@ -83,7 +83,7 @@ const DetailPage = () => {
                 className="p-3 border border-gray-400 rounded-md flex gap-5"
               >
                 <img
-                  src={data.image ? getImageSrc(data.image) : ""}
+                  src={data.image ? getImageSrc(data.image) : undefined}
                   alt={data.image}
                   className="mb-3 object-cover h-40 w-45"
                 />
