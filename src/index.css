@@ -14,6 +14,7 @@
     --color-white: #fffcf5;
     --color-black: #0c0c0d;
     --color-neutralblack: #3e3e3e;
+    --color-neutralgray: #b7b7b7;
     --font-nunito: Nunito Sans, "sans-serif";
     --font-inter: Inter, "sans-serif";
 
@@ -37,6 +38,13 @@
         rgba(0, 0, 0, 0.1)
       ),
       linear-gradient(0deg, var(--color-salmon), var(--color-salmon));
+
+    --gradient-neutralgray: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      linear-gradient(0deg, var(--color-neutralgray), var(--color-neutralgray));
   }
 }
 @utility bg-sage-gradient {
@@ -47,4 +55,7 @@
 }
 @utility bg-salmon-gradient {
   background-image: var(--gradient-salmon);
+}
+@utility bg-neutralgray-gradient {
+  background-image: var(--gradient-neutralgray);
 }
