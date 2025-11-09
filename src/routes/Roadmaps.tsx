@@ -14,9 +14,9 @@ const iconMap: Record<IconName, React.FC> = {
   code: CodeIcon,
   upload: UploadIcon,
 };
-
 const Roadmaps = () => {
   return (
+    <>
     <div className="max-w-5xl mx-auto mt-12 px-6">
       <h1 className="text-[55px] font-extrabold font-nunito text-neutralblack">
         {" "}
@@ -26,7 +26,6 @@ const Roadmaps = () => {
         {" "}
         Start discovering the paths that lead to where you want to be{" "}
       </p>
-
       <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-10 place-items-center">
         {Data.fields.map((field) => {
           const IconComponent = iconMap[field.icon as IconName];
@@ -49,16 +48,19 @@ const Roadmaps = () => {
           );
         })}
       </ul>
-
       <br />
       <p className="text-center font-inter font-medium text-[20px]">
         {" "}
         More career roadmaps coming soon!
       </p>
 
-      <Footer/>
+      
     </div>
+
+    <Footer/>
+    </>
   );
 };
+
 
 export default Roadmaps;

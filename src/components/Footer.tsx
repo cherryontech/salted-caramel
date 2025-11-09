@@ -1,4 +1,3 @@
-
 import { FaXTwitter, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa6';
 
 
@@ -6,14 +5,14 @@ const Footer = () => {
     return(
        <footer className="bg-[#C8D6AF] py-10 px-8 md:px-20">
         <div className="max-w-7xl mx-auto grid gridmax-w-7xl mx-auto flex flex-wrap justify-between items-start gap-10-cols-1 md:grid-cols-4 gap-10">
-        
+
         {/* Logo + Socials */}
             <div>
                 <div className="flex items-center gap-2 mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H4.5" />
                 </svg>
-            
+
                 <span className="font-semibold text-lg">All Roads</span>
             </div>
 
@@ -65,7 +64,7 @@ const Footer = () => {
             </div>
         </div>
     </footer> 
-        
+
     );
 };
 
