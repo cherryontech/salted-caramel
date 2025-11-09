@@ -1,5 +1,6 @@
 import ShuffleIcon from "../assets/icons/Shuffle";
 import WrenchIcon from "../assets/icons/Wrench";
+import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -49,6 +50,7 @@ const Home = () => {
           alt="Group of six multiracial women sitting around a table with laptops out with big smiles on their faces"
         />
       </div>
+      <Footer/>
     </>
   );
 };
