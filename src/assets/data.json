@@ -19,21 +19,25 @@
       "specializations": [
         {
           "image": "Image-20.png",
+          "alt": "Print out pages of web design frames with two people's hands in frame pointing and writing on the pages.",
           "name": "UX Designer",
           "description": "Uses the full design thinking framework, designs the way a website or service flows to make it as intuitive as possible for users."
         },
         {
           "image": "Image-21.png",
+          "alt": "A young woman working at a desk with a lot of papers around, looking up and smiling at a standing out of frame person.",
           "name": "UI Designer",
           "description": "Focuses on making a great interface - what people see and do on a website."
         },
         {
           "image": "Image-22.png",
+          "alt": "Three people's hands on a desk with work papers of designs and a laptop.",
           "name": "UX Researcher",
           "description": "Understands user needs to shape a new product, and improve it through testing and iteration with users."
         },
         {
           "image": "Image-23.png",
+          "alt": "A women at a desk writing designs on paper, in front of a laptop.",
           "name": "Visual Designer",
           "description": "Specializes in graphics, icons, logos, branding, animation, and other media that make a user experience compelling and unified."
         }
@@ -99,21 +103,25 @@
       "specializations": [
         {
           "image": "Image-16.png",
+          "alt": "A woman with glasses and hold a pen to her mouth, viewing a laptop of tasks.",
           "name": "Product Management",
           "description": "Leads cross-functional teams to design, build & launch great products."
         },
         {
           "image": "Image-17.png",
+          "alt": "A woman holding a coffee, sitting at a desk smiling while viewing her laptop in a work office.",
           "name": "Technical Product Management",
           "description": "Aligns engineering execution with product vision and business outcomes."
         },
         {
           "image": "Image-18.png",
+          "alt": "Two women smiling and pointing at the same laptop in an office setting.",
           "name": "AI / ML Product Management",
           "description": "Builds and launches intelligent, data-powered products using AI and machine learning."
         },
         {
           "image": "Image-19.png",
+          "alt": "A hand holding a box with floating networks and circular cyber items fading into a background of a city.",
           "name": "Cloud / Infrastructure Product Management",
           "description": "Manages large-scale cloud, data, and platform products supporting global customer needs."
         }
@@ -175,21 +183,25 @@
       "specializations": [
         {
           "image": "Image-2.png",
+          "alt": "A woman viewing a laptop screen to the left with a monitor on the right side with code.",
           "name": "Full-stack Developer",
           "description": "Builds and maintains complete software applications by handling both the front-end and back-end."
         },
         {
           "image": "Image-3.png",
+          "alt": "A shot of a laptop and a mobile phone with a coffee in frame.",
           "name": "Mobile Developer",
           "description": "Designs, develops, tests, and maintains software applications for mobile devices like smartphone and tablets."
         },
         {
           "image": "Image-4.png",
+          "alt": "A woman on a laptop at with the background of a brain and AI written in neon blue cyber-esque background.",
           "name": "AI/ ML Engineer",
           "description": "Builds artificial intelligence systems and researches, builds and designs self-running software to automate predictive models."
         },
         {
           "image": "Image-5.png",
+          "alt": "A woman standing, looking into a room and pointing at a blue low-opacity floating cloud with computer hardware.",
           "name": "Cloud Engineer",
           "description": "Designs, implements, manages, and maintains cloud infrastructure."
         }
@@ -255,21 +267,25 @@
       "specializations": [
         {
           "image": "Image-10.png",
+          "alt": "A woman's hand in frame writing on a board of papers with sticky notes.",
           "name": "UX Writing / Content Design",
           "description": "Focuses exclusively on the microcopy within products (buttons, labels, error messages) to guide the user experience and improve flow conversion."
         },
         {
           "image": "Image-11.png",
+          "alt": "A woman sitting at a long table in front of a laptop seemingly talking to an people in fromt of her who also sit in front of laptops.",
           "name": "Technical Content Development",
           "description": "Creates highly structured, accurate, and audience-specific, content like user manuals, help guides, API documentation, and tutorials."
         },
         {
           "image": "Image-12.png",
+          "alt": "A woman with glasses on typing on a keyboard in front of her computer with her left hand and writing on a pad with her right hand.",
           "name": "Content Strategy",
           "description": "Focuses on the “why” and “where” of content, including audits, competitive analysis, governance, and long-term content roadmaps tied to business KPIs."
         },
         {
           "image": "Image-13.png",
+          "alt": "Two hands in view of a whiteboard drawing out designs.",
           "name": "Instructional Design",
           "description": "Designs and develops educational content, training programs, and e-learning courses, applying learning theory to complex subjects."
         }
