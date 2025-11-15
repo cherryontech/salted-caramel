@@ -1,22 +1,24 @@
 import { Routes, Route } from "react-router";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import About from "./routes/About";
 import Roadmaps from "./routes/Roadmaps";
 import Community from "./routes/Community";
 import Dashboard from "./routes/Dashboard";
 import Home from "./routes/Home";
 import DetailPage from "./routes/DetailPage";
+import Questionnaire from "./questionnaire/Questionnaire";
 
 const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/roadmaps" element={<Roadmaps />} />
         <Route path="/community" element={<Community />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/builddashboard" element={<Questionnaire />} />
         <Route path="/details/:id" element={<DetailPage />} />
       </Routes>
     </>

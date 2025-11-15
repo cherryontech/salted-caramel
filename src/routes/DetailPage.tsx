@@ -194,7 +194,7 @@ const DetailPage = () => {
 
       <div className="flex justify-center text-neutralblack mr-9">
         {" "}
-        <NavLink to="/dashboard">
+        <NavLink to="/builddashboard">
           <button className="bg-blue-gradient pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2 mb-15">
             <WrenchIcon />
             <span className="mt-1.5">Build My Dashboard</span>

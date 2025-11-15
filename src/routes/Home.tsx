@@ -30,7 +30,7 @@ const Home = () => {
               <span className="mb-1 pr-1">Explore Careers</span>
             </button>
           </NavLink>
-          <NavLink to="/dashboard">
+          <NavLink to="/builddashboard">
             <button className="bg-blue-gradient text-black pt-1 pr-3 pl-3 pb-1 rounded-lg flex gap-2">
               <WrenchIcon />
               <span className="mt-1.5">Start My Dashboard</span>
@@ -50,7 +50,7 @@ const Home = () => {
           alt="Group of six multiracial women sitting around a table with laptops out with big smiles on their faces"
         />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
