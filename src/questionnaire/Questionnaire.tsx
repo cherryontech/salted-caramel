@@ -1,18 +1,21 @@
 import Header from "../components/Header";
-import EducationPage from "./pages/EducationPage";
+import AboutYourselfPage from "./pages/AboutYourselfPage";
 import SkillsPage from "./pages/SkillsPage";
-import LoadingPage from "./pages/LoadingPage";
-
-//  Carousel will be imported here as a wrapper for each page to go through
+// import LoadingPage from "./pages/LoadingPage";
+import Carousel from "../components/Carousel";
 
 const Questionnaire = () => {
   return (
     <>
       <Header />
-      <div>Questionnaire</div>
-      <EducationPage />
-      <SkillsPage />
-      <LoadingPage />
+      <div className="min-h-screen mr-20 mt-15 p-10">
+        <div className="max-w-[1400px] w-full h-[875px] mr-100">
+          <Carousel>
+            <AboutYourselfPage />
+            <SkillsPage />
+          </Carousel>
+        </div>
+      </div>
     </>
   );
 };
