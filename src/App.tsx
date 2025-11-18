@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router";
-// import Header from "./components/Header";
 import About from "./routes/About";
 import Roadmaps from "./routes/Roadmaps";
 import Community from "./routes/Community";
@@ -11,7 +10,6 @@ import Questionnaire from "./questionnaire/Questionnaire";
 const App = () => {
   return (
     <>
-      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
