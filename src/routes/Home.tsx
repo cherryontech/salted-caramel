@@ -32,10 +32,10 @@ const Home = () => {
               <span className="mb-1 pr-1">Explore Careers</span>
             </button>
           </NavLink>
-          <NavLink to="/dashboard">
-            <button className="bg-blue-gradient text-black pt-2 pr-3 pl-3 pb-2 rounded-lg flex gap-2">
+          <NavLink to="/builddashboard">
+            <button className="bg-blue-gradient text-black pt-1 pr-3 pl-3 pb-2.5 rounded-lg flex gap-2">
               <WrenchIcon />
-              <span className="mt-1.5">Start My Dashboard</span>
+              <span className="mt-2">Start My Dashboard</span>
             </button>
           </NavLink>
         </div>

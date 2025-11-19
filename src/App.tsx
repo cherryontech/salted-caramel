@@ -5,6 +5,7 @@ import Community from "./routes/Community";
 import Dashboard from "./routes/Dashboard";
 import Home from "./routes/Home";
 import DetailPage from "./routes/DetailPage";
+import Questionnaire from "./questionnaire/Questionnaire";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/roadmaps" element={<Roadmaps />} />
         <Route path="/community" element={<Community />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/builddashboard" element={<Questionnaire />} />
         <Route path="/details/:id" element={<DetailPage />} />
       </Routes>
     </>
