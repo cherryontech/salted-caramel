@@ -1,6 +1,6 @@
 const SkillsPage = () => {
   return (
-    <div className="flex ml-15 gap-50">
+    <div className="flex ml-15 gap-28">
       {/* LEFT CONTENT */}
       <aside>
         <p className="text-sm text-gray-700 px-3 text-center mt-4 text-[20px] text-left">

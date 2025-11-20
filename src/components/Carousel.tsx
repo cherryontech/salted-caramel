@@ -1,26 +1,44 @@
 import { Children, useState } from "react";
 import BackArrowIcon from "../assets/icons/BackArrow";
 import RightArrowIcon from "../assets/icons/RightArrow";
+import { useQuestionnaire } from "../questionnaire/QuestionnaireProvider";
 
 interface Carousel {
   children: React.ReactNode;
 }
 
 const Carousel: React.FC<Carousel> = ({ children }) => {
+  const { state } = useQuestionnaire();
   const [pagePosition, setPagePosition] = useState(0);
   const totalPages = Children.count(children);
 
   const back = () => {
-    if (pagePosition > 0) {
-      setPagePosition(pagePosition - 1);
+    if (pagePosition > 0) setPagePosition((p) => p - 1);
+  };
+
+  // Next will only move if canProceedForCurrentStep is true
+  const next = () => {
+    if (pagePosition < totalPages - 1 && canProceedForCurrentStep) {
+      setPagePosition((p) => p + 1);
     }
   };
 
-  const next = () => {
-    if (pagePosition < totalPages - 1) {
-      setPagePosition(pagePosition + 1);
+  const canProceedForCurrentStep = (() => {
+    // default false, then override per step
+    switch (pagePosition) {
+      case 0:
+        return Boolean(
+          state?.name?.trim() !== "" &&
+            state?.careerStage &&
+            state.careerStage !== ""
+        );
+      case 1:
+        // Example: on step 1 require nothing (or check other state fields).
+        return true;
+      default:
+        return true;
     }
-  };
+  })();
 
   return (
     <div className="relative w-full flex flex-col justify-between gap-13">
@@ -31,14 +49,16 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
           style={{ transform: `translateX(-${pagePosition * 100}%)` }}
         >
           {Children.map(children, (child) => (
-            <div className="w-full flex-shrink-0 h-full">{child}</div>
+            <div className="w-full flex-shrink-0 h-full" key={Math.random()}>
+              {child}
+            </div>
           ))}
         </div>
       </div>
 
       <div className="flex justify-end gap-6 mb-6">
         {/* DOTS */}
-        <div className="flex gap-3 mr-125 mt-6">
+        <div className="flex gap-3 mr-123 mt-6">
           {Array.from({ length: totalPages }).map((_, index) => (
             <div
               key={index}
@@ -49,22 +69,31 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
           ))}
         </div>
         {/* NAV BUTTONS */}
-        <button
-          onClick={back}
-          disabled={pagePosition === 0}
-          className="flex items-center gap-3 mt-1"
-        >
-          <BackArrowIcon />
-          Back
-        </button>
-        <button
-          onClick={next}
-          disabled={pagePosition === totalPages - 1}
-          className="bg-sage-gradient border rounded-md p-2 flex items-center gap-2"
-        >
-          <span className="ml-3">Next</span>
-          <RightArrowIcon />
-        </button>
+        <div className="mr-27 flex gap-4">
+          <button
+            onClick={back}
+            disabled={pagePosition === 0}
+            className="flex items-center gap-3 mt-1"
+          >
+            <BackArrowIcon />
+            Back
+          </button>
+
+          <button
+            onClick={next}
+            // disabled if on last page OR validation for this step fails
+            disabled={
+              pagePosition === totalPages - 1 || !canProceedForCurrentStep
+            }
+            className={`bg-sage-gradient border rounded-md p-2 flex items-center gap-2 ${
+              !canProceedForCurrentStep ? "opacity-40 cursor-not-allowed" : ""
+            }`}
+            aria-disabled={!canProceedForCurrentStep}
+          >
+            <span className="ml-3">Next</span>
+            <RightArrowIcon />
+          </button>
+        </div>
       </div>
     </div>
   );
