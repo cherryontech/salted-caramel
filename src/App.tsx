@@ -6,6 +6,7 @@ import Dashboard from "./routes/Dashboard";
 import Home from "./routes/Home";
 import DetailPage from "./routes/DetailPage";
 import Questionnaire from "./questionnaire/Questionnaire";
+import { QuestionnaireProvider } from "./questionnaire/QuestionnaireProvider";
 
 const App = () => {
   return (
@@ -16,7 +17,14 @@ const App = () => {
         <Route path="/roadmaps" element={<Roadmaps />} />
         <Route path="/community" element={<Community />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/builddashboard" element={<Questionnaire />} />
+        <Route
+          path="/builddashboard"
+          element={
+            <QuestionnaireProvider>
+              <Questionnaire />
+            </QuestionnaireProvider>
+          }
+        />
         <Route path="/details/:id" element={<DetailPage />} />
       </Routes>
     </>
