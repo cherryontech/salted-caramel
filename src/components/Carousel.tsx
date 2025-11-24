@@ -29,19 +29,22 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
       case 0:
         return Boolean(
           state?.name?.trim() !== "" &&
-            state?.careerStage &&
-            state.careerStage !== ""
+            state?.careerLevel &&
+            state.careerLevel !== ""
         );
       case 1:
-        // Example: on step 1 require nothing (or check other state fields).
-        return true;
+        return Boolean(
+          state?.selectedSkills &&
+            Array.isArray(state.selectedSkills) &&
+            state.selectedSkills.length > 0
+        );
       default:
         return true;
     }
   })();
 
   return (
-    <div className="relative w-full flex flex-col justify-between gap-13">
+    <div className="relative w-full flex flex-col justify-between gap-10 min-h-[40vh]">
       {/* Slide/Page Info */}
       <div className="flex-1 overflow-hidden relative">
         <div

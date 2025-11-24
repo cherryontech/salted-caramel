@@ -5,7 +5,10 @@ export const loadQuestionnaire = () => {
     ? JSON.parse(saved)
     : {
         name: "",
-        careerStage: "",
+        careerLevel: "",
+        fieldId: null,
+        specializationName: null,
+        selectedSkills: [],
         answers: {},
       };
 };
