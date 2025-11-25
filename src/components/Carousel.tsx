@@ -52,16 +52,16 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
           style={{ transform: `translateX(-${pagePosition * 100}%)` }}
         >
           {Children.map(children, (child) => (
-            <div className="w-full flex-shrink-0 h-full" key={Math.random()}>
+            <div className="w-full flex-shrink-0" key={Math.random()}>
               {child}
             </div>
           ))}
         </div>
       </div>
 
-      <div className="flex justify-end gap-6 mb-6">
+      <div className="flex justify-end gap-15 bottom-4">
         {/* DOTS */}
-        <div className="flex gap-3 mr-123 mt-6">
+        <div className="flex gap-3 mr-118 mt-2.5">
           {Array.from({ length: totalPages }).map((_, index) => (
             <div
               key={index}
@@ -72,7 +72,7 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
           ))}
         </div>
         {/* NAV BUTTONS */}
-        <div className="mr-27 flex gap-4">
+        <div className="mr-35 flex gap-4">
           <button
             onClick={back}
             disabled={pagePosition === 0}

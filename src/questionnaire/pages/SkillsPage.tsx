@@ -30,10 +30,24 @@ const SkillsPage = () => {
     });
   };
 
+  const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
+    eager: true,
+  });
+  const getImageSrc = (filename: string) => {
+    const path = `/src/assets/photos/${filename}`;
+    const imageModule = images[path] as { default: string } | undefined;
+    return imageModule?.default || "";
+  };
+
   return (
     <div className="flex ml-15 gap-28">
       {/* LEFT CONTENT */}
       <aside>
+        <img
+          src={getImageSrc("Allura - Trophy 1.svg")}
+          alt=""
+          className="w-[327px] h-[270px]"
+        />
         <p className="text-sm text-gray-700 px-3 text-center mt-4 text-[20px] text-left">
           You've learned a lot along the way,
           <br />
@@ -42,15 +56,15 @@ const SkillsPage = () => {
       </aside>
 
       {/* RIGHT CONTENT */}
-      <div className="w-[725px] h-[109]">
-        <h1 className="text-3xl font-extrabold mb-2 text-[48px] text-nunito font-stretch-115% leading-[5rem]">
+      <div className="w-[825px] h-[109]">
+        <h1 className="text-3xl font-extrabold mb-2 text-[48px] text-nunito font-stretch-115% leading-[4rem]">
           Build Your Dashboard
         </h1>
         <h2 className="mb-2 mt-5 text-[24px] text-inter font-stretch-125% leading-[4rem]">
           Do you have any of these skills or experiences already?
         </h2>
 
-        <div className="flex flex-wrap gap-35 max-w-[700px] justify-center mt-15 font-inter text-[16px]">
+        <div className="flex flex-wrap gap-y-[25px] gap-x-[35px] max-w-[800px] justify-left mt-15 font-inter text-[16px]">
           {[...technicalSkills, ...softSkills].map((skill) => {
             const selected = state.selectedSkills?.includes(skill);
 
