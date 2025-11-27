@@ -8,7 +8,6 @@ const GirlCyclingAnimation = () => {
         duration: 2,
         repeat: Infinity,
         ease: "easeInOut",
-        // delay: Math.random() * 2,
       }}
     >
       <svg
