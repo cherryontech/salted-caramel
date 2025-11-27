@@ -7,6 +7,7 @@ import Home from "./routes/Home";
 import DetailPage from "./routes/DetailPage";
 import Questionnaire from "./questionnaire/Questionnaire";
 import { QuestionnaireProvider } from "./questionnaire/QuestionnaireProvider";
+import ResultsPage from "./questionnaire/pages/ResultsPage";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/roadmaps" element={<Roadmaps />} />
         <Route path="/community" element={<Community />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/results" element={<ResultsPage />} />
         <Route
           path="/builddashboard"
           element={
