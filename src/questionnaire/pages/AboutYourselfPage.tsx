@@ -53,7 +53,7 @@ const AboutYourselfPage = () => {
       {/* LEFT CONTENT */}
       <aside>
         <img
-          src={getImageSrc("Layer_2.png")}
+          src={getImageSrc("Layer_1-2.svg")}
           alt=""
           className="w-[327px] h-[263px]"
         />
@@ -106,9 +106,9 @@ const AboutYourselfPage = () => {
                 name="selection"
                 value={item.level}
                 onChange={() =>
-                  setState((prev) => ({ ...prev, careerStage: item.level }))
+                  setState((prev) => ({ ...prev, careerLevel: item.level }))
                 }
-                checked={state.careerStage === item.level}
+                checked={state.careerLevel === item.level}
                 className="h-3 w-3 mt-1 accent-black cursor-pointer"
               />
 

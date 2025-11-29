@@ -6,7 +6,10 @@ import {
 
 type QuestionnaireState = {
   name: string;
-  careerStage: string;
+  careerLevel: string;
+  fieldId: number | null;
+  specializationName: string | null;
+  selectedSkills: string[];
   answers: Record<string, unknown>;
 };
 

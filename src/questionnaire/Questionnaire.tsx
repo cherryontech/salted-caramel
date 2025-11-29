@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import AboutYourselfPage from "./pages/AboutYourselfPage";
 import SkillsPage from "./pages/SkillsPage";
-// import LoadingPage from "./pages/LoadingPage";
+import LoadingPage from "./pages/LoadingPage";
 import Carousel from "../components/Carousel";
 
 const Questionnaire = () => {
@@ -13,6 +13,7 @@ const Questionnaire = () => {
           <Carousel>
             <AboutYourselfPage />
             <SkillsPage />
+            <LoadingPage />
           </Carousel>
         </div>
       </div>

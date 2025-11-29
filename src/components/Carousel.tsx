@@ -26,75 +26,75 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
   const canProceedForCurrentStep = (() => {
     // default false, then override per step
     switch (pagePosition) {
-      case 0:
+      case 0: // About Yourself
         return Boolean(
           state?.name?.trim() !== "" &&
-            state?.careerStage &&
-            state.careerStage !== ""
+            state?.careerLevel &&
+            state.careerLevel !== ""
         );
-      case 1:
-        // Example: on step 1 require nothing (or check other state fields).
-        return true;
+      case 1: // Skills
+        return Boolean(
+          state?.selectedSkills &&
+            Array.isArray(state.selectedSkills) &&
+            state.selectedSkills.length > 0
+        );
       default:
-        return true;
+        return false;
     }
   })();
 
+  const lastPage = pagePosition === totalPages - 1;
+
+  const slides = Children.toArray(children);
   return (
-    <div className="relative w-full flex flex-col justify-between gap-13">
+    <div className="relative w-full flex flex-col justify-between gap-10 min-h-[40vh]">
       {/* Slide/Page Info */}
       <div className="flex-1 overflow-hidden relative">
-        <div
-          className="flex transition-transform duration-300 h-full"
-          style={{ transform: `translateX(-${pagePosition * 100}%)` }}
-        >
-          {Children.map(children, (child) => (
-            <div className="w-full flex-shrink-0 h-full" key={Math.random()}>
-              {child}
-            </div>
-          ))}
+        <div className="h-full">
+          <div className="w-full h-full">{slides[pagePosition]}</div>
         </div>
       </div>
+      {!lastPage && (
+        <div className="flex justify-end gap-15 bottom-4">
+          {/* DOTS */}
+          <div className="flex gap-3 mr-118 mt-2.5">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <div
+                key={index}
+                className={`h-3 w-3 rounded-full ${
+                  index === pagePosition
+                    ? "bg-sage-gradient"
+                    : "bg-neutralblack"
+                }`}
+              />
+            ))}
+          </div>
+          {/* NAV BUTTONS */}
+          <div className="mr-35 flex gap-4">
+            <button
+              onClick={back}
+              disabled={pagePosition === 0}
+              className="flex items-center gap-3 mt-1"
+            >
+              <BackArrowIcon />
+              Back
+            </button>
 
-      <div className="flex justify-end gap-6 mb-6">
-        {/* DOTS */}
-        <div className="flex gap-3 mr-123 mt-6">
-          {Array.from({ length: totalPages }).map((_, index) => (
-            <div
-              key={index}
-              className={`h-3 w-3 rounded-full ${
-                index === pagePosition ? "bg-sage-gradient" : "bg-neutralblack"
+            <button
+              onClick={next}
+              // disabled if on last page OR validation for this step fails
+              disabled={!canProceedForCurrentStep}
+              className={`bg-sage-gradient border rounded-md p-2 flex items-center gap-2 ${
+                !canProceedForCurrentStep ? "opacity-40 cursor-not-allowed" : ""
               }`}
-            />
-          ))}
+              aria-disabled={!canProceedForCurrentStep}
+            >
+              <span className="ml-3">Next</span>
+              <RightArrowIcon />
+            </button>
+          </div>
         </div>
-        {/* NAV BUTTONS */}
-        <div className="mr-27 flex gap-4">
-          <button
-            onClick={back}
-            disabled={pagePosition === 0}
-            className="flex items-center gap-3 mt-1"
-          >
-            <BackArrowIcon />
-            Back
-          </button>
-
-          <button
-            onClick={next}
-            // disabled if on last page OR validation for this step fails
-            disabled={
-              pagePosition === totalPages - 1 || !canProceedForCurrentStep
-            }
-            className={`bg-sage-gradient border rounded-md p-2 flex items-center gap-2 ${
-              !canProceedForCurrentStep ? "opacity-40 cursor-not-allowed" : ""
-            }`}
-            aria-disabled={!canProceedForCurrentStep}
-          >
-            <span className="ml-3">Next</span>
-            <RightArrowIcon />
-          </button>
-        </div>
-      </div>
+      )}
     </div>
   );
 };
