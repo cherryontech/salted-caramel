@@ -1,9 +1,18 @@
+import { motion } from "framer-motion";
+
 const GirlCyclingAnimation = () => {
   return (
-    <div>
+    <motion.div
+      animate={{ x: [5, 20], opacity: [1, 0] }}
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+    >
       <svg
-        width="362"
-        height="362"
+        width="500"
+        height="500"
         viewBox="0 0 362 362"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +40,7 @@ const GirlCyclingAnimation = () => {
           />
         </defs>
       </svg>
-    </div>
+    </motion.div>
   );
 };
 
