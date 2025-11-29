@@ -1,5 +1,5 @@
 import { FaXTwitter, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa6';
-
+import Logo from "./Logo";
 
 const Footer = () => {
     return(
@@ -8,12 +8,12 @@ const Footer = () => {
 
         {/* Logo + Socials */}
             <div>
-                <div className="flex items-center gap-2 mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H4.5" />
-                </svg>
-
-                <span className="font-semibold text-lg">All Roads</span>
+                <div className="flex">
+                <Logo/>
+                <span className="font-nunito font-bold ml-2 whitespace-nowrap text-[20px]">
+                {" "}
+                All Roads
+                </span>
             </div>
 
             <div className="flex items-center gap-4 text-xl">
@@ -25,9 +25,9 @@ const Footer = () => {
             </div>
 
 
-            {/* Text Strong */}
+            {/* Explore Roadmaps */}
             <div>
-                <h3 className="font-semibold mb-4">Text Strong</h3>
+                <h3 className="font-semibold mb-4">Explore Roadmaps</h3>
                 <ul className="space-y-2 text-sm">
                     <li>UX Design</li>
                     <li>Software Development</li>
