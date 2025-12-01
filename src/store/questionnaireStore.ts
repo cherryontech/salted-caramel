@@ -5,6 +5,8 @@ export const loadQuestionnaire = () => {
     ? JSON.parse(saved)
     : {
         name: "",
+        icon: "",
+        careerGoal: "",
         careerLevel: "",
         fieldId: null,
         specializationName: null,

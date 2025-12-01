@@ -6,6 +6,8 @@ import {
 
 type QuestionnaireState = {
   name: string;
+  icon: string;
+  careerGoal: string;
   careerLevel: string;
   fieldId: number | null;
   specializationName: string | null;
