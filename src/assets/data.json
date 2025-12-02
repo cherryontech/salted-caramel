@@ -262,7 +262,7 @@
           }
         },
         {
-          "specialization": "Visual Design",
+          "specialization": "Visual Designer",
           "milestones": {
             "keySkills": {
               "Visual Composition": [
@@ -654,7 +654,7 @@
           }
         },
         {
-          "specialization": "AI/ML Product Management",
+          "specialization": "AI / ML Product Management",
           "milestones": {
             "keySkills": {
               "ML Literacy": [
@@ -759,7 +759,7 @@
           }
         },
         {
-          "specialization": "Cloud/Infra Product Management",
+          "specialization": "Cloud / Infrastructure Product Management",
           "milestones": {
             "keySkills": {
               "Cloud Fundamentals": [
@@ -896,7 +896,7 @@
         {
           "image": "Image-4.png",
           "alt": "A woman on a laptop at with the background of a brain and AI written in neon blue cyber-esque background.",
-          "name": "AI/ ML Engineer",
+          "name": "AI / ML Engineer",
           "description": "Builds artificial intelligence systems and researches, builds and designs self-running software to automate predictive models."
         },
         {
@@ -946,7 +946,7 @@
       ],
       "editableMilestones": [
         {
-          "specialization": "Full Stack Development",
+          "specialization": "Full-stack Developer",
           "milestones": {
             "keySkills": {
               "Front-End Foundations": [
@@ -1045,7 +1045,7 @@
           }
         },
         {
-          "specialization": "Mobile Development",
+          "specialization": "Mobile Developer",
           "milestones": {
             "keySkills": {
               "Platform Basics": [
@@ -1144,7 +1144,7 @@
           }
         },
         {
-          "specialization": "AI/ML Engineering",
+          "specialization": "AI / ML Engineer",
           "milestones": {
             "keySkills": {
               "Machine Learning Foundations": [
@@ -1240,7 +1240,7 @@
           }
         },
         {
-          "specialization": "Cloud Engineering",
+          "specialization": "Cloud Engineer",
           "milestones": {
             "keySkills": {
               "Cloud Foundations": [
@@ -1511,6 +1511,303 @@
                 "Write microcopy under time pressure.",
                 "Explain writing decisions with structure.",
                 "Solve ambiguous prompts clearly."
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Technical Content Development",
+          "milestones": {
+            "keySkills": {
+              "Technical Writing Fundamentals": [
+                "Write clear step-by-step instructions.",
+                "Learn task-based documentation structure.",
+                "Avoid jargon; define concepts simply.",
+                "Document processes through user workflows."
+              ],
+              "Documentation Architecture": [
+                "Build docs hierarchies and navigation.",
+                "Structure large-scale content sets.",
+                "Write modular reusable docs.",
+                "Use templates for consistency."
+              ],
+              "API & Developer Docs": [
+                "Write endpoint descriptions clearly.",
+                "Clarify parameters and responses.",
+                "Provide error guidance.",
+                "Add practical code examples."
+              ],
+              "Tooling & Version Control": [
+                "Use Git for documentation.",
+                "Learn Markdown, YAML, and doc generators.",
+                "Understand versioned documentation.",
+                "Collaborate through pull requests."
+              ]
+            },
+            "knowledge": {
+              "Software Development Basics": [
+                "Learn how APIs work.",
+                "Understand client–server communication.",
+                "Study scripting languages (Python/JS).",
+                "Grasp data structures and payloads."
+              ],
+              "Product & Engineering Concepts": [
+                "Learn how features are built.",
+                "Understand backend vs frontend tasks.",
+                "Know system diagrams.",
+                "Interpret technical requirements."
+              ],
+              "Documentation Standards": [
+                "Learn industry documentation frameworks.",
+                "Study docs-as-code methodologies.",
+                "Understand accessibility for docs.",
+                "Practice maintaining changelogs."
+              ]
+            },
+            "experience": {
+              "Writing Tutorials": [
+                "Build beginner-friendly how-to guides.",
+                "Explain concepts with diagrams.",
+                "Create troubleshooting sections.",
+                "Collect feedback from developers."
+              ],
+              "Maintaining Knowledge Bases": [
+                "Update docs after releases.",
+                "Maintain versioned content.",
+                "Manage outdated material.",
+                "Standardize formatting and tone."
+              ],
+              "Technical Feature Documentation": [
+                "Document APIs and SDKs.",
+                "Create integration guides.",
+                "Partner with engineers for accuracy.",
+                "Prototype content in staging environments."
+              ]
+            },
+            "network": {
+              "Engineering Partnerships": [
+                "Join standups with dev teams.",
+                "Build relationships with tech leads.",
+                "Shadow engineering demos.",
+                "Participate in API design reviews."
+              ],
+              "Documentation Communities": [
+                "Join Write the Docs.",
+                "Share documentation samples.",
+                "Attend developer advocacy meetups.",
+                "Connect with technical writers on LinkedIn."
+              ]
+            },
+            "jobSearch": {
+              "Portfolio": [
+                "Include API docs.",
+                "Show technical tutorials.",
+                "Add architecture diagrams if relevant.",
+                "Provide GitHub links for doc repos."
+              ],
+              "Interview Prep": [
+                "Practice explaining complex topics simply.",
+                "Create documentation samples on the spot.",
+                "Perform editing tests for clarity.",
+                "Answer toolchain-related questions."
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Content Strategy",
+          "milestones": {
+            "keySkills": {
+              "Content Auditing": [
+                "Audit existing content.",
+                "Identify gaps and redundancies.",
+                "Create inventory spreadsheets.",
+                "Evaluate content performance."
+              ],
+              "Content Planning": [
+                "Build content calendars.",
+                "Define audience segments.",
+                "Craft messaging pillars.",
+                "Align content goals with business goals."
+              ],
+              "Governance & Operations": [
+                "Create workflows and roles.",
+                "Standardize templates and guidelines.",
+                "Develop editorial processes.",
+                "Define content approval systems."
+              ],
+              "Cross-Channel Strategy": [
+                "Build omnichannel messaging.",
+                "Align tone across different platforms.",
+                "Manage content sequencing.",
+                "Evaluate multi-channel performance."
+              ]
+            },
+            "knowledge": {
+              "Marketing & UX": [
+                "Learn customer journeys.",
+                "Understand conversion funnels.",
+                "Study SEO fundamentals.",
+                "Master UX writing basics."
+              ],
+              "Analytics": [
+                "Use analytics tools.",
+                "Read engagement metrics.",
+                "Track content performance.",
+                "Run hypothesis-driven experiments."
+              ],
+              "Content Systems": [
+                "Learn CMS fundamentals.",
+                "Study taxonomy and tagging.",
+                "Understand metadata strategy.",
+                "Manage content lifecycles."
+              ]
+            },
+            "experience": {
+              "Designing Content Frameworks": [
+                "Build messaging frameworks.",
+                "Create tone guidelines.",
+                "Develop modular content systems.",
+                "Document content patterns."
+              ],
+              "Running Content Operations": [
+                "Manage calendars.",
+                "Oversee content production.",
+                "Optimize workflow efficiency.",
+                "Collaborate with multidisciplinary teams."
+              ],
+              "Large-Scale Content Initiatives": [
+                "Lead content redesigns.",
+                "Manage cross-channel campaigns.",
+                "Execute content migrations.",
+                "Evaluate impact using KPIs."
+              ]
+            },
+            "network": {
+              "Content Communities": [
+                "Join content strategy meetups.",
+                "Participate in webinars.",
+                "Share case studies.",
+                "Request peer feedback."
+              ],
+              "Cross-Functional Teams": [
+                "Build relationships with PMs.",
+                "Collaborate with UX.",
+                "Align with marketing leaders.",
+                "Regularly present content insights."
+              ]
+            },
+            "jobSearch": {
+              "Portfolio": [
+                "Include audits and frameworks.",
+                "Show strategic documents.",
+                "Add multi-channel campaigns.",
+                "Present measurable outcomes."
+              ],
+              "Interview Prep": [
+                "Practice strategic case studies.",
+                "Explain how you align content with business.",
+                "Solve ambiguous planning scenarios.",
+                "Present content operations plans."
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Instructional Design",
+          "milestones": {
+            "keySkills": {
+              "Learning Experience Design": [
+                "Create learning objectives.",
+                "Map learner journeys.",
+                "Apply adult learning principles.",
+                "Write clear instructional text."
+              ],
+              "Multimedia Instruction": [
+                "Script instructional videos.",
+                "Create storyboards.",
+                "Develop interactive modules.",
+                "Use microlearning principles."
+              ],
+              "Assessment & Evaluation": [
+                "Design pre/post tests.",
+                "Define success metrics.",
+                "Conduct learner feedback sessions.",
+                "Improve learning based on data."
+              ],
+              "Course Architecture": [
+                "Build content scopes.",
+                "Create curriculum structures.",
+                "Define delivery formats.",
+                "Design reusable course frameworks."
+              ]
+            },
+            "knowledge": {
+              "Learning Theories": [
+                "Understand ADDIE.",
+                "Learn Bloom’s taxonomy.",
+                "Study behaviorism vs constructivism.",
+                "Know cognitive load principles."
+              ],
+              "Tools & Technologies": [
+                "Use eLearning tools.",
+                "Learn LMS administration.",
+                "Understand SCORM/xAPI.",
+                "Use prototyping tools."
+              ],
+              "Accessibility in Learning": [
+                "Apply WCAG guidelines.",
+                "Design inclusive assessments.",
+                "Use accessible multimedia.",
+                "Test courses with diverse learners."
+              ]
+            },
+            "experience": {
+              "Course Creation": [
+                "Build small learning modules.",
+                "Test modules with pilot groups.",
+                "Iterate based on feedback.",
+                "Document learnings."
+              ],
+              "Curriculum Development": [
+                "Design multi-week programs.",
+                "Collaborate with subject matter experts.",
+                "Define project-based learning tasks.",
+                "Manage course revisions."
+              ],
+              "Scalable Learning Solutions": [
+                "Build multi-format experiences.",
+                "Create blended learning programs.",
+                "Implement certification processes.",
+                "Measure learner outcomes long-term."
+              ]
+            },
+            "network": {
+              "Learning Communities": [
+                "Join ID groups online.",
+                "Attend instructional design AMAs.",
+                "Share sample modules.",
+                "Get feedback from educators."
+              ],
+              "SME Partnerships": [
+                "Build relationships with SMEs.",
+                "Co-create content with experts.",
+                "Shadow expert-led sessions.",
+                "Seek recurring collaboration."
+              ]
+            },
+            "jobSearch": {
+              "Portfolio": [
+                "Include storyboards.",
+                "Share modules and scripts.",
+                "Show assessment frameworks.",
+                "Add curriculum designs."
+              ],
+              "Interview Prep": [
+                "Practice presenting course flows.",
+                "Solve rapid instructional challenges.",
+                "Explain learning theories clearly.",
+                "Answer tool-based scenario questions."
               ]
             }
           }

@@ -113,6 +113,15 @@ const Dashboard = () => {
         {IconComponent && <IconComponent />}
         {state.careerLevel}
       </p>
+
+      <main>
+        <h1>My Career Roadmap</h1>
+        <h2>Build Key Skills</h2>
+        <h2>Learn the Field</h2>
+        <h2>Gain Experience</h2>
+        <h2>Build My Network</h2>
+        <h2>Apply for Jobs</h2>
+      </main>
     </div>
   );
 };
