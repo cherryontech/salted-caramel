@@ -82,6 +82,99 @@
       ],
       "editableMilestones": [
         {
+          "specialization": "UX Designer",
+          "milestones": {
+            "keySkills": {
+              "Interaction Foundations": [
+                "Learn core interaction patterns (navigation, hierarchy, flows)",
+                "Practice structuring user tasks into clear flows",
+                "Redesign simple apps focusing on clarity and usability",
+                "Validate flows with quick user walkthroughs"
+              ],
+              "Wireframing Mastery": [
+                "Create low-fidelity wireframes with consistency",
+                "Use grids, spacing systems, and layout heuristics",
+                "Translate user needs into screen logic",
+                "Compare multiple layout alternatives before choosing one"
+              ],
+              "Usability Across Platforms": [
+                "Adapt designs for mobile, tablet, and web",
+                "Apply platform guidelines (iOS HIG, Material)",
+                "Evaluate accessibility implications of each component",
+                "Run small usability scans to detect friction"
+              ]
+            },
+            "knowledge": {
+              "Design Principles": [
+                "Understand affordances, signifiers, and mental models",
+                "Analyze good and bad UX in real products",
+                "Map principles to real user tasks"
+              ],
+              "Interaction Models": [
+                "Study navigation structures (tabs, drawers, carousels)",
+                "Learn about cognitive load and decision complexity",
+                "Compare alternative patterns and trade-offs"
+              ],
+              "Accessibility Foundations": [
+                "Review WCAG basics",
+                "Tag design decisions with accessibility impact",
+                "Create accessible color and type combinations"
+              ]
+            },
+            "experience": {
+              "Solo UX Projects": [
+                "Redesign a simple product end-to-end",
+                "Document decisions with clear rationale",
+                "Produce flows, wireframes, and usability notes"
+              ],
+              "Cross-Functional Collaboration": [
+                "Work with a designer or developer on a shared feature",
+                "Sync frequently to resolve design-dev constraints",
+                "Present design decisions confidently"
+              ],
+              "Real User Feedback": [
+                "Conduct lightweight usability tests",
+                "Prioritize issues by severity",
+                "Iterate based on findings"
+              ]
+            },
+            "network": {
+              "UX Communities": [
+                "Join local UX meetups or Slack groups",
+                "Participate in design reviews or critique sessions",
+                "Share small case studies for feedback"
+              ],
+              "Mentorship": [
+                "Connect with mid/senior UX designers",
+                "Ask for ongoing critique of design deliverables",
+                "Attend portfolio review events"
+              ],
+              "Industry Visibility": [
+                "Post breakdowns of UX patterns",
+                "Engage with others’ design critiques",
+                "Join hackathons or design challenges"
+              ]
+            },
+            "jobSearch": {
+              "Portfolio Readiness": [
+                "Build 2–3 UX case studies with clear problem framing",
+                "Show flows, iterations, and user insights",
+                "Demonstrate decision-making clarity"
+              ],
+              "Assignment Preparation": [
+                "Practice rapid wireframing challenges",
+                "Prepare presentation structure for design reviews",
+                "Review common UX interview questions"
+              ],
+              "Targeted Applications": [
+                "Apply to roles matching your UX strengths",
+                "Tailor portfolio sections per company",
+                "Follow up with hiring managers professionally"
+              ]
+            }
+          }
+        },
+        {
           "specialization": "UI Designer",
           "milestones": {
             "keySkills": {

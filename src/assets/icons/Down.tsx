@@ -1,0 +1,23 @@
+const DownIcon = () => {
+  return (
+    <div>
+      <svg
+        width="48"
+        height="48"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 18L24 30L36 18"
+          stroke="#3E3E3E"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  );
+};
+
+export default DownIcon;

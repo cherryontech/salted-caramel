@@ -12,7 +12,19 @@ type QuestionnaireState = {
   fieldId: number | null;
   specializationName: string | null;
   selectedSkills: string[];
-  answers: Record<string, unknown>;
+  userMilestones: {
+    [sectionName: string]: {
+      [milestoneTitle: string]: string[]; // array of steps
+    };
+  };
+  stepStatus: {
+    [sectionName: string]: {
+      [milestoneTitle: string]: {
+        [step: string]: number; // 0 = not started, 1 = in-progress, 2 = completed
+      };
+    };
+  };
+  // answers: Record<string, unknown>;
 };
 
 type QuestionnaireContextType = {

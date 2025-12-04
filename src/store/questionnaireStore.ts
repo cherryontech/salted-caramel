@@ -8,10 +8,11 @@ export const loadQuestionnaire = () => {
         icon: "",
         careerGoal: "",
         careerLevel: "",
-        fieldId: null,
-        specializationName: null,
+        fieldId: 1,
+        specializationName: "UX Designer",
         selectedSkills: [],
-        answers: {},
+        userMilestones: {}, // empty by default
+        stepStatus: {}, // empty by default
       };
 };
 
