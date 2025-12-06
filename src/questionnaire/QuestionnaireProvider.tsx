@@ -4,13 +4,26 @@ import {
   saveQuestionnaire,
 } from "../store/questionnaireStore";
 
-type QuestionnaireState = {
+export type QuestionnaireState = {
   name: string;
+  icon: string;
+  careerGoal: string;
   careerLevel: string;
   fieldId: number | null;
   specializationName: string | null;
   selectedSkills: string[];
-  answers: Record<string, unknown>;
+  userMilestones: {
+    [sectionName: string]: {
+      [milestoneTitle: string]: string[]; // array of steps
+    };
+  };
+  stepStatus: {
+    [sectionName: string]: {
+      [milestoneTitle: string]: {
+        [step: string]: number; // 0 = not started, 1 = in-progress, 2 = completed
+      };
+    };
+  };
 };
 
 type QuestionnaireContextType = {

@@ -4,7 +4,7 @@ import GirlCyclingAnimation from "../../assets/animations/GirlCycling";
 const LoadingPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      window.location.href = "/results";
+      window.location.href = "/dashboard";
     }, 2500);
     return () => clearTimeout(timer);
   }, []);

@@ -3,26 +3,30 @@ import { useQuestionnaire } from "../QuestionnaireProvider";
 
 const education = [
   {
+    icon: "book",
     level: "Student",
     description: "You're aiming to start your career.",
   },
   {
+    icon: "sun",
     level: "Early Career",
     description: "You have 0-3 years of experience in your field.",
   },
   {
+    icon: "trending",
     level: "Mid/senior experience",
     description:
       "You have 4+ years of experience and are growing your expertise.",
   },
   {
+    icon: "refresh",
     level: "Changing careers",
     description: "You have work experience and are exploring a new direction.",
   },
   {
     level: "Something Else",
     description:
-      "You don't see yourslef in one of these categories- no problem!",
+      "You don't see yourself in one of these categories- no problem!",
   },
 ];
 
@@ -106,7 +110,11 @@ const AboutYourselfPage = () => {
                 name="selection"
                 value={item.level}
                 onChange={() =>
-                  setState((prev) => ({ ...prev, careerLevel: item.level }))
+                  setState((prev) => ({
+                    ...prev,
+                    careerLevel: item.level,
+                    icon: item.icon || "",
+                  }))
                 }
                 checked={state.careerLevel === item.level}
                 className="h-3 w-3 mt-1 accent-black cursor-pointer"

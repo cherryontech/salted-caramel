@@ -1,5 +1,5 @@
-const ResultsPage = () => {
-  return <div>ResultsPage</div>;
-};
+// const ResultsPage = () => {
+//   return <div>ResultsPage</div>;
+// };
 
-export default ResultsPage;
+// export default ResultsPage;
