@@ -4,7 +4,7 @@ import {
   saveQuestionnaire,
 } from "../store/questionnaireStore";
 
-type QuestionnaireState = {
+export type QuestionnaireState = {
   name: string;
   icon: string;
   careerGoal: string;
@@ -24,7 +24,6 @@ type QuestionnaireState = {
       };
     };
   };
-  // answers: Record<string, unknown>;
 };
 
 type QuestionnaireContextType = {

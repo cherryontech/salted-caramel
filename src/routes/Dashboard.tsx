@@ -2,6 +2,7 @@ import { useState, useEffect, type JSX } from "react";
 import Data from "../assets/data.json";
 import Header from "../components/Header";
 import { useQuestionnaire } from "../questionnaire/QuestionnaireProvider";
+import type { QuestionnaireState } from "../questionnaire/QuestionnaireProvider";
 import Pencil from "../assets/icons/Pencil";
 import BookIcon from "../assets/icons/Book";
 import SunIcon from "../assets/icons/Sun";
@@ -32,7 +33,7 @@ const sectionTitlesMap: Record<string, string> = {
   jobSearch: "Apply for Jobs",
 };
 
-const QUICK_EMPTY_COUNT = 3; // default 3 milestones
+const QUICK_EMPTY_COUNT = 2; // default 3 milestones
 
 const Dashboard = () => {
   const { state, setState } = useQuestionnaire();
@@ -56,21 +57,12 @@ const Dashboard = () => {
   const isDataMode = Boolean(selectedField && specializationMilestones);
 
   // milestones
-  const jsonMilestones: Record<
+  const jsonMilestones = (specializationMilestones?.milestones ?? {}) as Record<
     string,
     Record<string, string[]>
-  > = specializationMilestones?.milestones ?? {};
+  >;
 
-  // default empty
-  const emptyDefaultSections: Record<string, string[]> = {
-    keySkills: [],
-    knowledge: [],
-    experience: [],
-    network: [],
-    jobSearch: [],
-  };
-
-  let initialMilestones: Record<string, Record<string, string[]>> = {};
+  const initialMilestones: Record<string, Record<string, string[]>> = {};
 
   if (!isDataMode) {
     // DEFAULT EMPTY MODE:
@@ -103,9 +95,9 @@ const Dashboard = () => {
 
   const [userMilestones, setUserMilestones] =
     useState<Record<string, Record<string, string[]>>>(initialMilestones);
-  const [stepStatus, setStepStatus] = useState<Record<string, number>>(
-    state.stepStatus || {}
-  );
+  const [stepStatus, setStepStatus] = useState<
+    QuestionnaireState["stepStatus"]
+  >(state.stepStatus || {});
 
   useEffect(() => {
     setState((prev) => ({ ...prev, userMilestones }));
@@ -128,12 +120,23 @@ const Dashboard = () => {
   // step status cycling
   const statusCheckbox = (current: number) => (current + 1) % 3;
 
-  const toggleStep = (section: string, milestone: string, idx: number) => {
-    const key = `${section}-${milestone}-${idx}`;
-    setStepStatus((prev) => ({
-      ...prev,
-      [key]: statusCheckbox(prev[key] ?? 0),
-    }));
+  const toggleStep = (section: string, milestone: string, step: string) => {
+    setStepStatus((prev) => {
+      const current = prev[section]?.[milestone]?.[step] ?? 0;
+
+      const next = statusCheckbox(current);
+
+      return {
+        ...prev,
+        [section]: {
+          ...prev[section],
+          [milestone]: {
+            ...prev[section]?.[milestone],
+            [step]: next,
+          },
+        },
+      };
+    });
   };
 
   const StepCheckbox = ({ status }: { status: number }) => {
@@ -334,7 +337,7 @@ const Dashboard = () => {
             const milestones = userMilestones[sectionKey] || {}; // may be empty
 
             return (
-              <section key={sectionKey} className="flex flex-col gap-5">
+              <section key={sectionKey} className="flex flex-col gap-5 mt-8">
                 <button
                   className="w-full flex justify-between items-center font-nunito font-semibold text-[36px] text-neutalblack border-b-2 border-gray-800 gap-212"
                   onClick={() => toggleSection(sectionKey)}
@@ -378,6 +381,10 @@ const Dashboard = () => {
                           {openMilestones[milestone] && (
                             <ul className="mt-1">
                               {steps.map((step, idx) => {
+                                const stepValue =
+                                  stepStatus[sectionKey]?.[milestone]?.[
+                                    String(idx)
+                                  ] ?? 0;
                                 const key = `${sectionKey}-${milestone}-${idx}`;
                                 return (
                                   <li
@@ -386,12 +393,14 @@ const Dashboard = () => {
                                   >
                                     <div
                                       onClick={() =>
-                                        toggleStep(sectionKey, milestone, idx)
+                                        toggleStep(
+                                          sectionKey,
+                                          milestone,
+                                          String(idx)
+                                        )
                                       }
                                     >
-                                      <StepCheckbox
-                                        status={stepStatus[key] ?? 0}
-                                      />
+                                      <StepCheckbox status={stepValue} />
                                     </div>
 
                                     <span className="flex-1">
@@ -405,7 +414,7 @@ const Dashboard = () => {
                                                 [key]: e.target.value,
                                               }))
                                             }
-                                            className="outline-none w-full"
+                                            className="outline-none w-271"
                                           />
                                           <button
                                             onClick={() =>
@@ -468,7 +477,7 @@ const Dashboard = () => {
                         </li>
                       ))
                     ) : (
-                      // DEFAULT EMPTY MODE - render three quick add inputs
+                      // Default empty mode, render three inputs
                       <>
                         {Array.from({ length: QUICK_EMPTY_COUNT }).map(
                           (_, i) => {
@@ -476,10 +485,10 @@ const Dashboard = () => {
                             return (
                               <div
                                 key={quickKey}
-                                className="flex items-center gap-3 border bg-white rounded-md border-gray-400 p-2"
+                                className="flex items-center gap-3 border bg-white rounded-md border-gray-400 p-2 hover:bg-gray-100"
                               >
                                 <input
-                                  className="flex-1 outline-none text-[24px] text-neutralgray"
+                                  className="flex-1 outline-none text-[24px] text-neutralgray hover:bg-gray-100"
                                   placeholder={`Add a milestone`}
                                   value={tempText[quickKey] ?? ""}
                                   onChange={(e) =>
@@ -494,7 +503,7 @@ const Dashboard = () => {
                                     quickAddMilestone(sectionKey, i)
                                   }
                                   className="text-blue-600 font-bold"
-                                  aria-label={`Add milestone quick ${i + 1}`}
+                                  // aria-label={`Add milestone quick ${i + 1}`}
                                 >
                                   <Pencil />
                                 </button>
@@ -506,7 +515,7 @@ const Dashboard = () => {
                     )}
 
                     {/* Add new milestone */}
-                    <li className="mt-1 flex items-center gap-3 border bg-white rounded-md border-gray-400 p-3">
+                    <li className="mt-1 flex items-center gap-3 border bg-white rounded-md border-gray-400 p-3 hover:bg-gray-100">
                       <input
                         className="flex-1 outline-none text-[24px] text-neutralgray"
                         placeholder="Add a milestone"
