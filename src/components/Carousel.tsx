@@ -39,6 +39,11 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
             Array.isArray(state.selectedSkills) &&
             state.selectedSkills.length > 0
         );
+      case 2: // Specialization
+        return Boolean(
+          state?.specializationName &&
+            state.specializationName !== ""
+        );
       default:
         return false;
     }
