@@ -16,7 +16,7 @@ const careerPath = [
 },
 {
     icon: "Zap.svg",
-    career: "Product Managment",
+    career: "Product Management",
     description: "Lead product strategy and execution, turning ideas into real customer solutions."
 },
 {
@@ -53,7 +53,7 @@ const BuildYourDashboard = () => {
             </aside>
 
             {/* Right content */}
-            <div className="flex flex-col w-[520px]">
+            <div className="flex-1 flex-col w-[520px]">
                 <h1 className="text-[32px] font-semibold leading-tight">
                     Build Your Dashboard
                 </h1>
