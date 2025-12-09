@@ -79,6 +79,371 @@
             "Get your first job as a UX Designer."
           ]
         }
+      ],
+      "editableMilestones": [
+        {
+          "specialization": "UX Designer",
+          "milestones": {
+            "keySkills": {
+              "Interaction Foundations": [
+                "Learn core interaction patterns (navigation, hierarchy, flows)",
+                "Practice structuring user tasks into clear flows",
+                "Redesign simple apps focusing on clarity and usability",
+                "Validate flows with quick user walkthroughs"
+              ],
+              "Wireframing Mastery": [
+                "Create low-fidelity wireframes with consistency",
+                "Use grids, spacing systems, and layout heuristics",
+                "Translate user needs into screen logic",
+                "Compare multiple layout alternatives before choosing one"
+              ],
+              "Usability Across Platforms": [
+                "Adapt designs for mobile, tablet, and web",
+                "Apply platform guidelines (iOS HIG, Material)",
+                "Evaluate accessibility implications of each component",
+                "Run small usability scans to detect friction"
+              ]
+            },
+            "knowledge": {
+              "Design Principles": [
+                "Understand affordances, signifiers, and mental models",
+                "Analyze good and bad UX in real products",
+                "Map principles to real user tasks"
+              ],
+              "Interaction Models": [
+                "Study navigation structures (tabs, drawers, carousels)",
+                "Learn about cognitive load and decision complexity",
+                "Compare alternative patterns and trade-offs"
+              ],
+              "Accessibility Foundations": [
+                "Review WCAG basics",
+                "Tag design decisions with accessibility impact",
+                "Create accessible color and type combinations"
+              ]
+            },
+            "experience": {
+              "Solo UX Projects": [
+                "Redesign a simple product end-to-end",
+                "Document decisions with clear rationale",
+                "Produce flows, wireframes, and usability notes"
+              ],
+              "Cross-Functional Collaboration": [
+                "Work with a designer or developer on a shared feature",
+                "Sync frequently to resolve design-dev constraints",
+                "Present design decisions confidently"
+              ],
+              "Real User Feedback": [
+                "Conduct lightweight usability tests",
+                "Prioritize issues by severity",
+                "Iterate based on findings"
+              ]
+            },
+            "network": {
+              "UX Communities": [
+                "Join local UX meetups or Slack groups",
+                "Participate in design reviews or critique sessions",
+                "Share small case studies for feedback"
+              ],
+              "Mentorship": [
+                "Connect with mid/senior UX designers",
+                "Ask for ongoing critique of design deliverables",
+                "Attend portfolio review events"
+              ],
+              "Industry Visibility": [
+                "Post breakdowns of UX patterns",
+                "Engage with others’ design critiques",
+                "Join hackathons or design challenges"
+              ]
+            },
+            "jobSearch": {
+              "Portfolio Readiness": [
+                "Build 2–3 UX case studies with clear problem framing",
+                "Show flows, iterations, and user insights",
+                "Demonstrate decision-making clarity"
+              ],
+              "Assignment Preparation": [
+                "Practice rapid wireframing challenges",
+                "Prepare presentation structure for design reviews",
+                "Review common UX interview questions"
+              ],
+              "Targeted Applications": [
+                "Apply to roles matching your UX strengths",
+                "Tailor portfolio sections per company",
+                "Follow up with hiring managers professionally"
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "UI Designer",
+          "milestones": {
+            "keySkills": {
+              "Visual Foundations": [
+                "Master grids, spacing, alignment",
+                "Practice creating balanced visual hierarchies",
+                "Build color palettes and type scales"
+              ],
+              "Component Design": [
+                "Create reusable components (buttons, forms, nav elements)",
+                "Ensure consistency across states and sizes",
+                "Apply design tokens"
+              ],
+              "High Fidelity Craft": [
+                "Produce polished screens with pixel precision",
+                "Refine micro-interactions visually",
+                "Run a visual QA pass on every screen"
+              ]
+            },
+            "knowledge": {
+              "UI Systems": [
+                "Understand material design, iOS, fluent interfaces",
+                "Compare visual conventions across ecosystems",
+                "Break down interface patterns in top apps"
+              ],
+              "Color & Typography": [
+                "Study psychological impact of color",
+                "Practice pairing typefaces for hierarchy",
+                "Test readability across devices"
+              ],
+              "Design Systems": [
+                "Learn atoms, molecules, templates",
+                "Document components and variants",
+                "Link tokens to styling rules"
+              ]
+            },
+            "experience": {
+              "Interface Redesigns": [
+                "Pick any app and redesign 2–3 main screens",
+                "Describe visual decisions clearly",
+                "Improve consistency and clarity"
+              ],
+              "Team Collaboration": [
+                "Work with UX or devs to align UI with flows",
+                "Flag feasibility or token issues early",
+                "Deliver assets in Figma properly"
+              ],
+              "Real-World Visual QA": [
+                "Check accessibility of colors",
+                "Validate responsiveness",
+                "Export assets and specs cleanly"
+              ]
+            },
+            "network": {
+              "Visual Communities": [
+                "Join UI inspiration groups",
+                "Participate in critique challenges",
+                "Share UI shots for review"
+              ],
+              "Design System Circles": [
+                "Connect with DS designers",
+                "Ask for component-level critique",
+                "Discuss token or theming strategies"
+              ],
+              "Visibility": [
+                "Publish breakdowns of interfaces",
+                "Engage in Figma community discussions",
+                "Contribute small UI kits"
+              ]
+            },
+            "jobSearch": {
+              "UI Portfolio": [
+                "Show before/after redesigns",
+                "Include rationale for every visual choice",
+                "Present consistent component logic"
+              ],
+              "Skill Demos": [
+                "Prepare live mockup exercises",
+                "Demonstrate quick iteration in Figma",
+                "Practice verbalizing design rationale"
+              ],
+              "Targeted Outreach": [
+                "Apply to UI-strong or DS-focused orgs",
+                "Tailor portfolio pieces to role needs",
+                "Reach out to hiring managers with UI samples"
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "UX Researcher",
+          "milestones": {
+            "keySkills": {
+              "Research Fundamentals": [
+                "Practice forming research questions",
+                "Learn usability testing basics",
+                "Build simple test scripts"
+              ],
+              "Qualitative Methods": [
+                "Run interviews",
+                "Conduct think-aloud testing",
+                "Analyze patterns objectively"
+              ],
+              "Synthesis Skills": [
+                "Cluster insights into themes",
+                "Produce insight statements",
+                "Build journey maps or opportunity maps"
+              ]
+            },
+            "knowledge": {
+              "Method Selection": [
+                "Understand generative vs evaluative research",
+                "Choose methods based on constraints",
+                "Compare tactical vs strategic research"
+              ],
+              "Data Analysis": [
+                "Learn coding of qualitative data",
+                "Practice quantifying qualitative patterns",
+                "Use research frameworks for clarity"
+              ],
+              "Research Ethics": [
+                "Handle consent and privacy appropriately",
+                "Avoid leading questions",
+                "Document methodology transparently"
+              ]
+            },
+            "experience": {
+              "Small Tests": [
+                "Conduct quick usability tests",
+                "Take notes and tag issues",
+                "Share actionable improvements"
+              ],
+              "Real Interviews": [
+                "Recruit users ethically",
+                "Run semi-structured interviews",
+                "Analyze findings thoroughly"
+              ],
+              "Product Team Research": [
+                "Present insights to teams",
+                "Influence decisions with evidence",
+                "Track how insights impacted the product"
+              ]
+            },
+            "network": {
+              "Research Communities": [
+                "Join UX research Slack groups",
+                "Share method questions",
+                "Attend remote research meetups"
+              ],
+              "Peer Reviews": [
+                "Exchange test plans with other researchers",
+                "Observe each other’s sessions",
+                "Ask for synthesis feedback"
+              ],
+              "Visibility": [
+                "Publish method breakdowns",
+                "Share case studies",
+                "Mentor juniors informally"
+              ]
+            },
+            "jobSearch": {
+              "Research Portfolio": [
+                "Document research questions, process, insights",
+                "Show methods and artifacts",
+                "Include clear business impact"
+              ],
+              "Interview Readiness": [
+                "Prepare for research scenario prompts",
+                "Demonstrate critique of research plans",
+                "Present insight-driven storytelling"
+              ],
+              "Strategic Search": [
+                "Apply to orgs valuing evidence-based design",
+                "Share research samples with recruiters",
+                "Tailor portfolio per industry"
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Visual Designer",
+          "milestones": {
+            "keySkills": {
+              "Visual Composition": [
+                "Learn balance, contrast, rhythm",
+                "Deconstruct posters, apps, branding work",
+                "Recreate layouts for practice"
+              ],
+              "Style Exploration": [
+                "Experiment with illustration, photography, minimalism, grids",
+                "Build moodboards per concept",
+                "Develop a consistent personal visual language"
+              ],
+              "Applied Visual Systems": [
+                "Create visual themes for products",
+                "Ensure consistency across screens",
+                "Explore animation and motion basics"
+              ]
+            },
+            "knowledge": {
+              "Design Theory": [
+                "Study Gestalt principles",
+                "Understand color theory deeply",
+                "Analyze visual storytelling"
+              ],
+              "Branding Essentials": [
+                "Learn logo construction",
+                "Build mini brand guidelines",
+                "Test brand application across touchpoints"
+              ],
+              "Motion and Modern Aesthetics": [
+                "Learn micro-motion essentials",
+                "Study modern UI visual trends",
+                "Apply motion to enhance hierarchy"
+              ]
+            },
+            "experience": {
+              "Visual Projects": [
+                "Redesign marketing assets",
+                "Build hero sections or banners",
+                "Practice using different aesthetics"
+              ],
+              "Product Visuals": [
+                "Create UI visuals with strong aesthetic control",
+                "Align visuals with UX flows",
+                "Test visual readability"
+              ],
+              "Advanced Craft": [
+                "Produce polished component visuals",
+                "Add motion cues",
+                "Prepare assets for dev handoff"
+              ]
+            },
+            "network": {
+              "Visual Inspiration Circles": [
+                "Join Dribbble / Behance groups",
+                "Share studies and get critique",
+                "Participate in aesthetic challenges"
+              ],
+              "Branding and Visual Groups": [
+                "Connect with brand designers",
+                "Exchange feedback on visuals",
+                "Review each other’s compositions"
+              ],
+              "Creative Presence": [
+                "Publish visual explorations",
+                "Contribute small free UI/visual kits",
+                "Engage with design community content"
+              ]
+            },
+            "jobSearch": {
+              "Visual Portfolio": [
+                "Show diverse aesthetics + coherent style",
+                "Include compositional breakdowns",
+                "Document process for at least 1 project"
+              ],
+              "Practical Tests": [
+                "Prepare for timed visual exercises",
+                "Practice redesign prompts",
+                "Communicate decisions visually and verbally"
+              ],
+              "Targeted Search": [
+                "Apply to design-led companies",
+                "Tailor visuals to brand aesthetic",
+                "Share visual case studies in applications"
+              ]
+            }
+          }
+        }
       ]
     },
     {
@@ -163,6 +528,434 @@
             "Own end-to-end customer funnel and roadmap."
           ]
         }
+      ],
+      "editableMilestones": [
+        {
+          "specialization": "Product Management",
+          "milestones": {
+            "keySkills": {
+              "Core Product Thinking": [
+                "Identify customer problems through interviews.",
+                "Translate insights into problem statements.",
+                "Define hypotheses and product assumptions.",
+                "Practice framing solutions using user journeys."
+              ],
+              "Prioritization and Decision Making": [
+                "Use frameworks (RICE, MoSCoW, Kano).",
+                "Create lightweight scoring models.",
+                "Practice tradeoff discussions with constraints.",
+                "Document decisions clearly for teams."
+              ],
+              "Communication and Stakeholder Management": [
+                "Run structured meetings with agendas.",
+                "Write clear product briefs and narratives.",
+                "Deliver concise presentations for execs.",
+                "Facilitate cross-functional alignment."
+              ],
+              "Roadmapping": [
+                "Create quarterly roadmaps tied to goals.",
+                "Use themes instead of feature lists.",
+                "Validate roadmap items with data.",
+                "Communicate updates effectively."
+              ]
+            },
+            "knowledge": {
+              "Product Development Lifecycle": [
+                "Understand discovery vs delivery.",
+                "Learn Agile ceremonies.",
+                "Know basics of dev sprints.",
+                "Learn QA and release processes."
+              ],
+              "UX Fundamentals": [
+                "Understand usability heuristics.",
+                "Interpret wireframes and prototypes.",
+                "Learn basic user research methods.",
+                "Collaborate effectively with designers."
+              ],
+              "Business and Strategy Basics": [
+                "Learn market sizing.",
+                "Understand competition analysis.",
+                "Define KPIs and OKRs.",
+                "Study common monetization models."
+              ]
+            },
+            "experience": {
+              "Building Small Features": [
+                "Scope a small feature from idea to release.",
+                "Create acceptance criteria.",
+                "Collaborate with engineering early.",
+                "Measure usage post-launch."
+              ],
+              "Owning a Product Area": [
+                "Manage a backlog.",
+                "Run sprint rituals with team.",
+                "Drive cross-team dependencies.",
+                "Present outcomes to leadership."
+              ],
+              "Leading Product Discovery": [
+                "Conduct interviews.",
+                "Organize insights into themes.",
+                "Validate assumptions with prototypes.",
+                "Document learnings for stakeholders."
+              ]
+            },
+            "network": {
+              "PM Communities": [
+                "Join local PM groups.",
+                "Attend meetups or AMAs.",
+                "Participate in Slack/Discord spaces.",
+                "Ask for feedback on portfolio."
+              ],
+              "Cross-Functional Relationships": [
+                "Build rapport with engineers/designers.",
+                "Share product updates regularly.",
+                "Seek mentorship from senior PMs.",
+                "Offer help in cross-team projects."
+              ],
+              "Thought Leadership": [
+                "Write short product case reflections.",
+                "Share discovery learnings publicly.",
+                "Present in internal knowledge sessions.",
+                "Participate in product panels."
+              ]
+            },
+            "jobSearch": {
+              "Portfolio": [
+                "Create 2–3 product case studies.",
+                "Focus on thinking, not visuals.",
+                "Show roadmap decisions.",
+                "Include metrics and learnings."
+              ],
+              "Interview Readiness": [
+                "Practice product sense questions.",
+                "Practice prioritization frameworks.",
+                "Do mock stakeholder exercises.",
+                "Prepare behavioral answers using STAR."
+              ],
+              "Industry Targeting": [
+                "Select industries you understand.",
+                "Tailor resumes to problem-solving roles.",
+                "Reach out to PM recruiters.",
+                "Track applications systematically."
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Technical Product Management",
+          "milestones": {
+            "keySkills": {
+              "Technical Fluency": [
+                "Learn basics of APIs and microservices.",
+                "Understand data schemas and systems.",
+                "Read engineering specs.",
+                "Interpret logs/metrics at a high level."
+              ],
+              "Technical Roadmapping": [
+                "Align technical work with business goals.",
+                "Prioritize tech debt vs features.",
+                "Work with eng leads on architecture docs.",
+                "Communicate technical risks clearly."
+              ],
+              "Cross-Functional Translation": [
+                "Convert user needs into system requirements.",
+                "Create technical acceptance criteria.",
+                "Build shared vocabulary between teams.",
+                "Coordinate between infra and feature teams."
+              ]
+            },
+            "knowledge": {
+              "Software Architecture Basics": [
+                "Learn monolith vs microservices.",
+                "Understand message queues.",
+                "Learn cloud basics (AWS/GCP/Azure).",
+                "Study REST and GraphQL."
+              ],
+              "Data and Analytics": [
+                "Understand event tracking.",
+                "Read dashboards reliably.",
+                "Interpret debugging signals.",
+                "Learn experimentation basics."
+              ],
+              "Security and Compliance": [
+                "Understand authentication flows.",
+                "Learn common vulnerabilities.",
+                "Study privacy and data retention.",
+                "Assess risks across systems."
+              ]
+            },
+            "experience": {
+              "Managing Backend or API Work": [
+                "Write API requirements.",
+                "Work with eng on versioning.",
+                "Manage backward compatibility.",
+                "Oversee technical testing cycles."
+              ],
+              "Leading Technical Initiatives": [
+                "Drive migrations.",
+                "Manage system integrations.",
+                "Lead backlog refinement sessions.",
+                "Document engineering dependencies."
+              ],
+              "Cross-Team Technical Programs": [
+                "Coordinate multi-squad efforts.",
+                "Track technical milestones.",
+                "Facilitate design/architecture reviews.",
+                "Communicate progress to leadership."
+              ]
+            },
+            "network": {
+              "Eng/Infra Partnerships": [
+                "Build trust with engineering managers.",
+                "Attend architecture sessions.",
+                "Shadow engineering sprints.",
+                "Seek feedback on your technical docs."
+              ],
+              "Technical Communities": [
+                "Join cloud/backend meetups.",
+                "Participate in API design discussions.",
+                "Contribute to internal dev tooling talks.",
+                "Follow technical PM influencers."
+              ],
+              "Mentorship": [
+                "Get a mentor who is a staff engineer or TPM.",
+                "Attend 1 — 1s monthly.",
+                "Share drafts of specs for critique.",
+                "Request growth guidance."
+              ]
+            },
+            "jobSearch": {
+              "Technical Portfolio": [
+                "Include API docs you wrote.",
+                "Include architecture diagrams.",
+                "Document a migration you led.",
+                "Include engineering partner testimonials."
+              ],
+              "Technical Interviews": [
+                "Practice system design questions.",
+                "Practice product-tech tradeoffs.",
+                "Explain architecture in simple terms.",
+                "Demonstrate decision frameworks."
+              ],
+              "Targeting Companies": [
+                "Focus on tech-first companies.",
+                "Apply to infra/platform teams.",
+                "Highlight technical achievements.",
+                "Contact hiring managers directly."
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "AI / ML Product Management",
+          "milestones": {
+            "keySkills": {
+              "ML Literacy": [
+                "Understand model training basics.",
+                "Learn types of ML (supervised, NLP, LLMs).",
+                "Interpret ML metrics like accuracy/F1.",
+                "Understand data labeling processes."
+              ],
+              "Ethical AI and Responsible Use": [
+                "Learn bias detection principles.",
+                "Study data privacy standards.",
+                "Define safe deployment criteria.",
+                "Conduct ethical impact assessments."
+              ],
+              "AI Product Execution": [
+                "Define model success metrics.",
+                "Design human-in-the-loop workflows.",
+                "Plan A/B tests for models.",
+                "Coordinate model deployment stages."
+              ]
+            },
+            "knowledge": {
+              "AI Systems Architecture": [
+                "Understand pipelines.",
+                "Learn inference optimization basics.",
+                "Study vector databases.",
+                "Know GPU vs CPU tradeoffs."
+              ],
+              "Data Strategy": [
+                "Define data sources and quality.",
+                "Understand annotation flows.",
+                "Review observational data.",
+                "Partner with data engineers on schemas."
+              ],
+              "LLM Specific Concepts": [
+                "Understand embeddings.",
+                "Learn RLHF basics.",
+                "Understand prompt engineering.",
+                "Study retrieval-augmented generation."
+              ]
+            },
+            "experience": {
+              "Shipping AI Features": [
+                "Write ML product requirement docs.",
+                "Define evaluation criteria.",
+                "Run early model testing.",
+                "Work with data scientists weekly."
+              ],
+              "Improving AI Systems": [
+                "Analyze failure cases.",
+                "Iterate on model prompts.",
+                "Optimize user flows using feedback.",
+                "Adjust evaluation metrics."
+              ],
+              "Leading AI Programs": [
+                "Coordinate data labeling at scale.",
+                "Manage multi-model rollouts.",
+                "Lead privacy and compliance reviews.",
+                "Track compute cost constraints."
+              ]
+            },
+            "network": {
+              "DS/ML Teams": [
+                "Build relationships with data scientists.",
+                "Join model review meetings.",
+                "Attend AI tech talks internally.",
+                "Request ML mentorship."
+              ],
+              "AI Communities": [
+                "Participate in ML/Product meetups.",
+                "Join LLM slack groups.",
+                "Share insights on ethical AI.",
+                "Comment on open-source AI projects."
+              ],
+              "Industry Leaders": [
+                "Connect with AI PMs at big tech.",
+                "Attend virtual AI summits.",
+                "Follow researchers on social media.",
+                "Join AI policy discussions."
+              ]
+            },
+            "jobSearch": {
+              "AI PM Portfolio": [
+                "Include ML features shipped.",
+                "Include analyses of model performance.",
+                "Add ethical frameworks you applied.",
+                "Include data strategy documents."
+              ],
+              "AI PM Interviews": [
+                "Practice ML product sense.",
+                "Practice evaluation tradeoffs.",
+                "Explain ML concepts simply.",
+                "Build AI feature proposals."
+              ],
+              "Targeted Companies": [
+                "Apply to AI-first startups.",
+                "Explore LLM teams at tech giants.",
+                "Reach out to DS leaders.",
+                "Highlight technical literacy."
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Cloud / Infrastructure Product Management",
+          "milestones": {
+            "keySkills": {
+              "Cloud Fundamentals": [
+                "Understand computing, storage, networking.",
+                "Read cloud architecture diagrams.",
+                "Learn containerization basics.",
+                "Understand latency and throughput concepts."
+              ],
+              "Platform Product Skills": [
+                "Prioritize reliability improvements.",
+                "Balance performance vs cost.",
+                "Translate ops issues into product requirements.",
+                "Map user needs to infra capabilities."
+              ],
+              "Incident and Reliability Management": [
+                "Learn severity levels.",
+                "Run post-mortems effectively.",
+                "Align infra roadmaps with SLOs.",
+                "Track SLIs across systems."
+              ]
+            },
+            "knowledge": {
+              "Cloud Architecture": [
+                "Learn VPCs, subnets, firewalls.",
+                "Understand load balancers.",
+                "Study distributed system patterns.",
+                "Know data replication models."
+              ],
+              "DevOps and Automation": [
+                "Understand CI/CD concepts.",
+                "Learn monitoring/logging tools.",
+                "Study IaC principles.",
+                "Know on-call processes."
+              ],
+              "Reliability Engineering": [
+                "Understand SRE frameworks.",
+                "Learn error budgets.",
+                "Know observability principles.",
+                "Interpret infra dashboards."
+              ]
+            },
+            "experience": {
+              "Infrastructure Workflows": [
+                "Build dashboards with engineering.",
+                "Plan capacity for growth.",
+                "Manage system performance improvements.",
+                "Coordinate infra releases."
+              ],
+              "Platform Adoption": [
+                "Document developer workflows.",
+                "Improve platform onboarding.",
+                "Run developer surveys.",
+                "Prioritize internal tooling."
+              ],
+              "Large-Scale Programs": [
+                "Lead cloud migrations.",
+                "Drive reliability programs.",
+                "Manage multi-region rollouts.",
+                "Plan cost optimization initiatives."
+              ]
+            },
+            "network": {
+              "Infra Teams": [
+                "Connect with SREs.",
+                "Attend reliability reviews.",
+                "Shadow infra deployments.",
+                "Share platform feedback."
+              ],
+              "Cloud Communities": [
+                "Join K8s, Cloud Native meetups.",
+                "Participate in DevOps groups.",
+                "Follow cloud product leaders.",
+                "Attend containerization events."
+              ],
+              "Partner Engineers": [
+                "Build relationships with vendor experts.",
+                "Join cloud provider Office Hours.",
+                "Explore certifications guidance.",
+                "Learn best practices collaboratively."
+              ]
+            },
+            "jobSearch": {
+              "Infra PM Portfolio": [
+                "Document reliability initiatives.",
+                "Include platform adoption metrics.",
+                "Show architecture improvements.",
+                "Include migration case studies."
+              ],
+              "Infra Interview Prep": [
+                "Practice cloud architecture explainers.",
+                "Run through ops scenario questions.",
+                "Practice cost optimization exercises.",
+                "Explain distributed system tradeoffs."
+              ],
+              "Targeted Roles": [
+                "Look for platform PM, infra PM, DevOps PM.",
+                "Tailor your resume with technical impact.",
+                "Reach out to SRE/infra hiring managers.",
+                "Apply to cloud providers & infra startups."
+              ]
+            }
+          }
+        }
       ]
     },
     {
@@ -196,7 +989,7 @@
         {
           "image": "Image-4.png",
           "alt": "A woman on a laptop at with the background of a brain and AI written in neon blue cyber-esque background.",
-          "name": "AI/ ML Engineer",
+          "name": "AI / ML Engineer",
           "description": "Builds artificial intelligence systems and researches, builds and designs self-running software to automate predictive models."
         },
         {
@@ -242,6 +1035,397 @@
             "Prepare for interview process with leetcode and network.",
             "Get certifications for target specialization."
           ]
+        }
+      ],
+      "editableMilestones": [
+        {
+          "specialization": "Full-stack Developer",
+          "milestones": {
+            "keySkills": {
+              "Front-End Foundations": [
+                "Learn HTML semantics and accessibility basics",
+                "Practice CSS layout: flexbox, grid, responsive design",
+                "Master core JavaScript (scope, async, DOM)",
+                "Build static pages and small interactive components"
+              ],
+              "Back-End Fundamentals": [
+                "Learn server-side frameworks (Express, Django, Rails)",
+                "Practice routing, middleware, and basic APIs",
+                "Understand authentication basics (JWT, sessions)",
+                "Build simple CRUD apps"
+              ],
+              "Full Stack Integration": [
+                "Connect front-end UI to APIs effectively",
+                "Implement form handling, validation, and error states",
+                "Manage application state across client and server",
+                "Deploy small applications to cloud environments"
+              ],
+              "Code Quality and Testing": [
+                "Write unit tests for front-end and back-end",
+                "Use linters, formatters, and git workflows",
+                "Practice code reviews and refactoring",
+                "Adopt CI basics"
+              ]
+            },
+            "knowledge": {
+              "Databases": [
+                "Learn SQL fundamentals",
+                "Practice joins, indexing, constraints",
+                "Understand NoSQL differences and use cases"
+              ],
+              "Web Architecture": [
+                "Study client–server models",
+                "Understand REST, GraphQL, and websockets",
+                "Evaluate caching strategies"
+              ],
+              "Security Basics": [
+                "Learn OWASP Top 10",
+                "Implement input validation and sanitation",
+                "Understand encryption and secure storage"
+              ]
+            },
+            "experience": {
+              "Solo Projects": [
+                "Build basic apps (todo, notes, blogs)",
+                "Use a full stack: database + API + UI",
+                "Document your code and decisions"
+              ],
+              "Collaborative Work": [
+                "Work on shared repos",
+                "Manage branches and PRs",
+                "Fix bugs or implement small features in an existing app"
+              ],
+              "Production Simulation": [
+                "Deploy an app with environment variables",
+                "Monitor logs and handle failure modes",
+                "Improve performance and reliability"
+              ]
+            },
+            "network": {
+              "Dev Communities": [
+                "Join full-stack or JavaScript meetups",
+                "Share small demos or code snippets",
+                "Engage in discussions around patterns and tools"
+              ],
+              "Open Source": [
+                "Contribute documentation updates",
+                "Submit small PRs to beginner-friendly repos",
+                "Join community Discords and ask technical questions"
+              ],
+              "Professional Links": [
+                "Connect with engineers working on stacks you want",
+                "Ask for architecture or portfolio feedback",
+                "Attend virtual engineering summits"
+              ]
+            },
+            "jobSearch": {
+              "Technical Portfolio": [
+                "Publish 2–3 full-stack apps with clear READMEs",
+                "Include diagrams and API documentation",
+                "Explain technical decisions"
+              ],
+              "Interview Prep": [
+                "Practice DSA basics (arrays, strings, maps)",
+                "Do mock system design for small apps",
+                "Practice live coding with frameworks you know"
+              ],
+              "Strategic Applications": [
+                "Apply to companies using your preferred stack",
+                "Tailor GitHub repos to highlight relevant skills",
+                "Reach out to hiring managers with demos or repos"
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Mobile Developer",
+          "milestones": {
+            "keySkills": {
+              "Platform Basics": [
+                "Learn Swift/Kotlin fundamentals",
+                "Practice building simple screens",
+                "Use platform navigation patterns",
+                "Handle permissions and local storage"
+              ],
+              "UI Components and Interaction": [
+                "Build reusable UI components",
+                "Implement form handling and validation",
+                "Apply animations and gestures",
+                "Follow material/HIG guidelines"
+              ],
+              "Data and State Management": [
+                "Integrate local databases (Room, CoreData)",
+                "Implement API calls with proper error handling",
+                "Choose and apply a state pattern (MVVM, Redux, Bloc)",
+                "Manage caching and offline states"
+              ],
+              "Performance Optimization": [
+                "Measure app performance",
+                "Reduce over-rendering",
+                "Optimize API usage",
+                "Apply efficient threading or coroutines"
+              ]
+            },
+            "knowledge": {
+              "Mobile Architecture": [
+                "Compare MVC, MVVM, MVI patterns",
+                "Understand dependency injection basics",
+                "Learn module structuring"
+              ],
+              "Networking and APIs": [
+                "Work with JSON, pagination, throttling",
+                "Handle authentication tokens",
+                "Secure requests and local storage"
+              ],
+              "App Ecosystem": [
+                "Learn app store guidelines",
+                "Understand analytics, crash reporting",
+                "Study mobile testing frameworks"
+              ]
+            },
+            "experience": {
+              "Feature-Level Projects": [
+                "Build small mobile apps (weather, notes, recipes)",
+                "Connect UI with APIs",
+                "Handle navigation and error states"
+              ],
+              "Multi-Screen Apps": [
+                "Build flows with deep links",
+                "Apply consistent design patterns",
+                "Add accessibility features"
+              ],
+              "Near-Production Work": [
+                "Implement push notifications",
+                "Manage releases and versioning",
+                "Deploy to TestFlight or internal testing"
+              ]
+            },
+            "network": {
+              "Mobile Dev Groups": [
+                "Join iOS/Android dev guilds",
+                "Ask and answer technical questions",
+                "Join local hackathons"
+              ],
+              "Developer Ecosystem Events": [
+                "Attend iOS/Android meetups",
+                "Follow SDK updates and changelogs",
+                "Participate in code challenges"
+              ],
+              "Professional Relationships": [
+                "Connect with senior mobile engineers",
+                "Get feedback on code architecture",
+                "Collaborate on open-source components"
+              ]
+            },
+            "jobSearch": {
+              "Mobile Portfolio": [
+                "Publish apps or demo builds",
+                "Include screen recordings and architecture notes",
+                "Write clean READMEs"
+              ],
+              "Technical Prep": [
+                "Practice mobile-specific interview questions",
+                "Solve concurrency and state management scenarios",
+                "Walk through architecture choices"
+              ],
+              "Application Strategy": [
+                "Target companies with mobile-first culture",
+                "Tailor apps to show native or cross-platform skills",
+                "Reach out to recruiters with demos"
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "AI / ML Engineer",
+          "milestones": {
+            "keySkills": {
+              "Machine Learning Foundations": [
+                "Learn regression, classification, clustering",
+                "Practice model training with scikit-learn",
+                "Understand evaluation metrics",
+                "Implement small ML scripts"
+              ],
+              "Data Processing": [
+                "Work with NumPy, pandas, and data cleaning basics",
+                "Handle missing values and feature engineering",
+                "Visualize datasets for insights"
+              ],
+              "Deep Learning Foundations": [
+                "Build basic neural networks with PyTorch/TensorFlow",
+                "Understand layers, backpropagation, activations",
+                "Train models on small datasets"
+              ],
+              "ML Deployment": [
+                "Package models with FastAPI or Flask",
+                "Convert models to ONNX",
+                "Monitor model drift and performance"
+              ]
+            },
+            "knowledge": {
+              "Mathematics for ML": [
+                "Learn linear algebra essentials",
+                "Study probability and distributions",
+                "Understand gradient descent deeply"
+              ],
+              "Model Architecture": [
+                "Explore CNNs, RNNs, Transformers",
+                "Understand embeddings and attention",
+                "Compare model complexity vs performance"
+              ],
+              "Ethical and Secure ML": [
+                "Learn bias detection methods",
+                "Understand model interpretability",
+                "Apply responsible AI patterns"
+              ]
+            },
+            "experience": {
+              "Dataset Projects": [
+                "Clean real datasets",
+                "Build baseline models",
+                "Document evaluation results"
+              ],
+              "Applied ML Projects": [
+                "Implement NLP, CV, recommendation tasks",
+                "Compare multiple models",
+                "Optimize hyperparameters"
+              ],
+              "Production ML": [
+                "Build inference APIs",
+                "Use vector stores or embeddings",
+                "Monitor versioned models"
+              ]
+            },
+            "network": {
+              "ML Communities": [
+                "Join Kaggle competitions",
+                "Engage in ML forums",
+                "Share notebooks"
+              ],
+              "Research Circles": [
+                "Attend AI seminars",
+                "Review ML papers with peers",
+                "Participate in study groups"
+              ],
+              "Professional AI Network": [
+                "Connect with applied ML engineers",
+                "Ask for code reviews",
+                "Join AI hackathons"
+              ]
+            },
+            "jobSearch": {
+              "ML Portfolio": [
+                "Publish notebooks",
+                "Share model comparisons",
+                "Explain ML reasoning"
+              ],
+              "Technical Preparation": [
+                "Practice ML system design",
+                "Solve modeling case questions",
+                "Explain trade-offs clearly"
+              ],
+              "Focused Applications": [
+                "Target AI-first startups or labs",
+                "Share ML demos with recruiters",
+                "Prepare for research component interviews"
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Cloud Engineer",
+          "milestones": {
+            "keySkills": {
+              "Cloud Foundations": [
+                "Learn AWS/Azure/GCP basics",
+                "Understand IAM, VPCs, regions",
+                "Practice deploying simple resources"
+              ],
+              "Compute and Networking": [
+                "Set up EC2/VMs and autoscaling",
+                "Configure subnets, routing, firewalls",
+                "Implement load balancers"
+              ],
+              "Infrastructure as Code": [
+                "Use Terraform or CloudFormation",
+                "Create reusable modules",
+                "Validate and plan changes safely"
+              ],
+              "Monitoring and Ops": [
+                "Configure logs, metrics, dashboards",
+                "Handle alerts and incidents",
+                "Automate deployment pipelines"
+              ]
+            },
+            "knowledge": {
+              "Distributed Systems": [
+                "Study consistency models",
+                "Understand scaling approaches",
+                "Learn fault tolerance patterns"
+              ],
+              "Security": [
+                "Apply least-privilege IAM",
+                "Encrypt data in transit/at rest",
+                "Use secrets managers properly"
+              ],
+              "Cloud Cost Management": [
+                "Learn pricing models",
+                "Optimize resource usage",
+                "Tagging and tracking policies"
+              ]
+            },
+            "experience": {
+              "Hands-On Labs": [
+                "Deploy static sites",
+                "Use managed databases",
+                "Configure networking manually"
+              ],
+              "IaC Projects": [
+                "Recreate environments with Terraform",
+                "Automate provisioning",
+                "Implement CI/CD"
+              ],
+              "Production Simulation": [
+                "Set up monitoring and alerting",
+                "Manage environment variables",
+                "Troubleshoot real failures"
+              ]
+            },
+            "network": {
+              "Cloud Communities": [
+                "Participate in AWS/GCP user groups",
+                "Join cloud Slack/Discord spaces",
+                "Share IaC modules"
+              ],
+              "Certification Circles": [
+                "Study with peers",
+                "Exchange questions and scenarios",
+                "Share mock environment builds"
+              ],
+              "Professional Cloud Network": [
+                "Connect with cloud engineers",
+                "Ask for architecture feedback",
+                "Collaborate on automation projects"
+              ]
+            },
+            "jobSearch": {
+              "Cloud Projects Portfolio": [
+                "Show IaC deployments",
+                "Publish diagrams and architecture",
+                "Demonstrate automation pipelines"
+              ],
+              "Interview Prep": [
+                "Practice cloud scenario questions",
+                "Solve network design challenges",
+                "Walk through troubleshooting steps"
+              ],
+              "Application Strategy": [
+                "Apply to DevOps/cloud-engineering heavy orgs",
+                "Tailor projects to their stack",
+                "Reach out with architecture demos"
+              ]
+            }
+          }
         }
       ]
     },
@@ -322,6 +1506,404 @@
             "Specializing in one area (B2B SaaS content or finance) to build domain expertise.",
             "Work for a Content Marketing Agency to learn scalable production processes."
           ]
+        }
+      ],
+      "editableMilestones": [
+        {
+          "specialization": "UX Writing / Content Design",
+          "milestones": {
+            "keySkills": {
+              "Writing for Interfaces": [
+                "Practice microcopy for buttons, forms, errors.",
+                "Write concise alternatives for the same message.",
+                "Test messages for clarity and tone.",
+                "Remove unnecessary words without losing meaning."
+              ],
+              "Voice & Tone Mastery": [
+                "Build tone variations for different contexts.",
+                "Analyze V/T guidelines from major brands.",
+                "Document voice principles for consistency.",
+                "Practice adapting tone across touchpoints."
+              ],
+              "User-Centered Messaging": [
+                "Transform requirements into user-centered copy.",
+                "Use user goals to define messaging hierarchy.",
+                "Validate copy through usability tests.",
+                "Identify friction caused by unclear content."
+              ],
+              "Content Systems": [
+                "Create reusable content patterns.",
+                "Co-design taxonomy with design teams.",
+                "Manage versioning of content.",
+                "Build scalable content guidelines."
+              ]
+            },
+            "knowledge": {
+              "UX Principles": [
+                "Learn usability heuristics.",
+                "Understand UX flows end-to-end.",
+                "Practice wireframe reading.",
+                "Know accessibility writing rules."
+              ],
+              "Design Collaboration": [
+                "Understand Figma basics.",
+                "Write copy directly in flows.",
+                "Interpret component libraries.",
+                "Learn design tokens and constraints."
+              ],
+              "Research Foundations": [
+                "Write research-friendly prototypes.",
+                "Understand qualitative testing.",
+                "Interpret user insights.",
+                "Use data to refine copy."
+              ]
+            },
+            "experience": {
+              "Microcopy Projects": [
+                "Rewrite onboarding flows.",
+                "Improve forms and CTAs.",
+                "Fix error messages.",
+                "Document alternative explorations."
+              ],
+              "UX Writing in Product Teams": [
+                "Collaborate with designers on flows.",
+                "Participate in critiques.",
+                "Own copy for your product area.",
+                "Manage content reviews with PMs."
+              ],
+              "Systems-Level Content": [
+                "Build content frameworks.",
+                "Co-create design system guidelines.",
+                "Develop component-ready copy.",
+                "Audit content inconsistencies."
+              ]
+            },
+            "network": {
+              "UX Writing Communities": [
+                "Join UX Writing Hub groups.",
+                "Participate in content reviews.",
+                "Attend webinars and AMAs.",
+                "Share your writing samples."
+              ],
+              "Cross-Functional Partners": [
+                "Partner with product designers.",
+                "Build relationships with researchers.",
+                "Collaborate with localization teams.",
+                "Exchange feedback with PMs."
+              ]
+            },
+            "jobSearch": {
+              "Portfolio": [
+                "Showcase end-to-end flow rewrites.",
+                "Include before/after comparisons.",
+                "Explain rationale and research insights.",
+                "Add voice & tone guidelines you’ve created."
+              ],
+              "Interview Prep": [
+                "Practice scenario-based writing.",
+                "Write microcopy under time pressure.",
+                "Explain writing decisions with structure.",
+                "Solve ambiguous prompts clearly."
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Technical Content Development",
+          "milestones": {
+            "keySkills": {
+              "Technical Writing Fundamentals": [
+                "Write clear step-by-step instructions.",
+                "Learn task-based documentation structure.",
+                "Avoid jargon; define concepts simply.",
+                "Document processes through user workflows."
+              ],
+              "Documentation Architecture": [
+                "Build docs hierarchies and navigation.",
+                "Structure large-scale content sets.",
+                "Write modular reusable docs.",
+                "Use templates for consistency."
+              ],
+              "API & Developer Docs": [
+                "Write endpoint descriptions clearly.",
+                "Clarify parameters and responses.",
+                "Provide error guidance.",
+                "Add practical code examples."
+              ],
+              "Tooling & Version Control": [
+                "Use Git for documentation.",
+                "Learn Markdown, YAML, and doc generators.",
+                "Understand versioned documentation.",
+                "Collaborate through pull requests."
+              ]
+            },
+            "knowledge": {
+              "Software Development Basics": [
+                "Learn how APIs work.",
+                "Understand client–server communication.",
+                "Study scripting languages (Python/JS).",
+                "Grasp data structures and payloads."
+              ],
+              "Product & Engineering Concepts": [
+                "Learn how features are built.",
+                "Understand backend vs frontend tasks.",
+                "Know system diagrams.",
+                "Interpret technical requirements."
+              ],
+              "Documentation Standards": [
+                "Learn industry documentation frameworks.",
+                "Study docs-as-code methodologies.",
+                "Understand accessibility for docs.",
+                "Practice maintaining changelogs."
+              ]
+            },
+            "experience": {
+              "Writing Tutorials": [
+                "Build beginner-friendly how-to guides.",
+                "Explain concepts with diagrams.",
+                "Create troubleshooting sections.",
+                "Collect feedback from developers."
+              ],
+              "Maintaining Knowledge Bases": [
+                "Update docs after releases.",
+                "Maintain versioned content.",
+                "Manage outdated material.",
+                "Standardize formatting and tone."
+              ],
+              "Technical Feature Documentation": [
+                "Document APIs and SDKs.",
+                "Create integration guides.",
+                "Partner with engineers for accuracy.",
+                "Prototype content in staging environments."
+              ]
+            },
+            "network": {
+              "Engineering Partnerships": [
+                "Join standups with dev teams.",
+                "Build relationships with tech leads.",
+                "Shadow engineering demos.",
+                "Participate in API design reviews."
+              ],
+              "Documentation Communities": [
+                "Join Write the Docs.",
+                "Share documentation samples.",
+                "Attend developer advocacy meetups.",
+                "Connect with technical writers on LinkedIn."
+              ]
+            },
+            "jobSearch": {
+              "Portfolio": [
+                "Include API docs.",
+                "Show technical tutorials.",
+                "Add architecture diagrams if relevant.",
+                "Provide GitHub links for doc repos."
+              ],
+              "Interview Prep": [
+                "Practice explaining complex topics simply.",
+                "Create documentation samples on the spot.",
+                "Perform editing tests for clarity.",
+                "Answer toolchain-related questions."
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Content Strategy",
+          "milestones": {
+            "keySkills": {
+              "Content Auditing": [
+                "Audit existing content.",
+                "Identify gaps and redundancies.",
+                "Create inventory spreadsheets.",
+                "Evaluate content performance."
+              ],
+              "Content Planning": [
+                "Build content calendars.",
+                "Define audience segments.",
+                "Craft messaging pillars.",
+                "Align content goals with business goals."
+              ],
+              "Governance & Operations": [
+                "Create workflows and roles.",
+                "Standardize templates and guidelines.",
+                "Develop editorial processes.",
+                "Define content approval systems."
+              ],
+              "Cross-Channel Strategy": [
+                "Build omnichannel messaging.",
+                "Align tone across different platforms.",
+                "Manage content sequencing.",
+                "Evaluate multi-channel performance."
+              ]
+            },
+            "knowledge": {
+              "Marketing & UX": [
+                "Learn customer journeys.",
+                "Understand conversion funnels.",
+                "Study SEO fundamentals.",
+                "Master UX writing basics."
+              ],
+              "Analytics": [
+                "Use analytics tools.",
+                "Read engagement metrics.",
+                "Track content performance.",
+                "Run hypothesis-driven experiments."
+              ],
+              "Content Systems": [
+                "Learn CMS fundamentals.",
+                "Study taxonomy and tagging.",
+                "Understand metadata strategy.",
+                "Manage content lifecycles."
+              ]
+            },
+            "experience": {
+              "Designing Content Frameworks": [
+                "Build messaging frameworks.",
+                "Create tone guidelines.",
+                "Develop modular content systems.",
+                "Document content patterns."
+              ],
+              "Running Content Operations": [
+                "Manage calendars.",
+                "Oversee content production.",
+                "Optimize workflow efficiency.",
+                "Collaborate with multidisciplinary teams."
+              ],
+              "Large-Scale Content Initiatives": [
+                "Lead content redesigns.",
+                "Manage cross-channel campaigns.",
+                "Execute content migrations.",
+                "Evaluate impact using KPIs."
+              ]
+            },
+            "network": {
+              "Content Communities": [
+                "Join content strategy meetups.",
+                "Participate in webinars.",
+                "Share case studies.",
+                "Request peer feedback."
+              ],
+              "Cross-Functional Teams": [
+                "Build relationships with PMs.",
+                "Collaborate with UX.",
+                "Align with marketing leaders.",
+                "Regularly present content insights."
+              ]
+            },
+            "jobSearch": {
+              "Portfolio": [
+                "Include audits and frameworks.",
+                "Show strategic documents.",
+                "Add multi-channel campaigns.",
+                "Present measurable outcomes."
+              ],
+              "Interview Prep": [
+                "Practice strategic case studies.",
+                "Explain how you align content with business.",
+                "Solve ambiguous planning scenarios.",
+                "Present content operations plans."
+              ]
+            }
+          }
+        },
+        {
+          "specialization": "Instructional Design",
+          "milestones": {
+            "keySkills": {
+              "Learning Experience Design": [
+                "Create learning objectives.",
+                "Map learner journeys.",
+                "Apply adult learning principles.",
+                "Write clear instructional text."
+              ],
+              "Multimedia Instruction": [
+                "Script instructional videos.",
+                "Create storyboards.",
+                "Develop interactive modules.",
+                "Use microlearning principles."
+              ],
+              "Assessment & Evaluation": [
+                "Design pre/post tests.",
+                "Define success metrics.",
+                "Conduct learner feedback sessions.",
+                "Improve learning based on data."
+              ],
+              "Course Architecture": [
+                "Build content scopes.",
+                "Create curriculum structures.",
+                "Define delivery formats.",
+                "Design reusable course frameworks."
+              ]
+            },
+            "knowledge": {
+              "Learning Theories": [
+                "Understand ADDIE.",
+                "Learn Bloom’s taxonomy.",
+                "Study behaviorism vs constructivism.",
+                "Know cognitive load principles."
+              ],
+              "Tools & Technologies": [
+                "Use eLearning tools.",
+                "Learn LMS administration.",
+                "Understand SCORM/xAPI.",
+                "Use prototyping tools."
+              ],
+              "Accessibility in Learning": [
+                "Apply WCAG guidelines.",
+                "Design inclusive assessments.",
+                "Use accessible multimedia.",
+                "Test courses with diverse learners."
+              ]
+            },
+            "experience": {
+              "Course Creation": [
+                "Build small learning modules.",
+                "Test modules with pilot groups.",
+                "Iterate based on feedback.",
+                "Document learnings."
+              ],
+              "Curriculum Development": [
+                "Design multi-week programs.",
+                "Collaborate with subject matter experts.",
+                "Define project-based learning tasks.",
+                "Manage course revisions."
+              ],
+              "Scalable Learning Solutions": [
+                "Build multi-format experiences.",
+                "Create blended learning programs.",
+                "Implement certification processes.",
+                "Measure learner outcomes long-term."
+              ]
+            },
+            "network": {
+              "Learning Communities": [
+                "Join ID groups online.",
+                "Attend instructional design AMAs.",
+                "Share sample modules.",
+                "Get feedback from educators."
+              ],
+              "SME Partnerships": [
+                "Build relationships with SMEs.",
+                "Co-create content with experts.",
+                "Shadow expert-led sessions.",
+                "Seek recurring collaboration."
+              ]
+            },
+            "jobSearch": {
+              "Portfolio": [
+                "Include storyboards.",
+                "Share modules and scripts.",
+                "Show assessment frameworks.",
+                "Add curriculum designs."
+              ],
+              "Interview Prep": [
+                "Practice presenting course flows.",
+                "Solve rapid instructional challenges.",
+                "Explain learning theories clearly.",
+                "Answer tool-based scenario questions."
+              ]
+            }
+          }
         }
       ]
     }
