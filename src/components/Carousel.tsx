@@ -3,6 +3,7 @@ import BackArrowIcon from "../assets/icons/BackArrow";
 import RightArrowIcon from "../assets/icons/RightArrow";
 import { useQuestionnaire } from "../questionnaire/QuestionnaireProvider";
 
+
 interface Carousel {
   children: React.ReactNode;
 }
@@ -38,12 +39,36 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
             Array.isArray(state.selectedSkills) &&
             state.selectedSkills.length > 0
         );
+      case 2: // Build Your Dashboard
+        console.log("Page 2 - careerGoal:", state?.careerGoal);
+        return Boolean(
+          state?.careerGoal &&
+            state.careerGoal !== ""
+        );
+      case 3: // Specialization
+        console.log("Page 3 - specializationName:", state?.specializationName);
+        return Boolean(
+          state?.specializationName &&
+            state.specializationName !== ""
+        );
       default:
         return false;
     }
   })();
 
   const lastPage = pagePosition === totalPages - 1;
+  
+  // determines if Skip is allowed
+  const canSkip = () => {
+    return pagePosition > 0 && pagePosition < totalPages - 1;
+  };
+
+  // moves forward one page, ignoring validation
+  const skip = () => {
+    if (canSkip()) {
+      setPagePosition((p) => p + 1);
+    } 
+  };
 
   const slides = Children.toArray(children);
   return (
@@ -69,8 +94,19 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
               />
             ))}
           </div>
+          
           {/* NAV BUTTONS */}
+          
+          {/* Skip */}
+          <button onClick={skip} 
+            disabled={!canSkip()}
+            className="flex items-center gap-2">
+            Skip 
+            <RightArrowIcon/>
+          </button>
+            
           <div className="mr-35 flex gap-4">
+
             <button
               onClick={back}
               disabled={pagePosition === 0}

@@ -3,6 +3,8 @@ import AboutYourselfPage from "./pages/AboutYourselfPage";
 import SkillsPage from "./pages/SkillsPage";
 import LoadingPage from "./pages/LoadingPage";
 import Carousel from "../components/Carousel";
+import BuildYourDashboard from "./pages/BuildYourDashboard";
+import Specialization from "./pages/Specialization";
 
 const Questionnaire = () => {
   return (
@@ -12,6 +14,8 @@ const Questionnaire = () => {
         <div className="max-w-[1400px] w-full h-[875px] mr-100">
           <Carousel>
             <AboutYourselfPage />
+            <BuildYourDashboard/>
+            <Specialization/>
             <SkillsPage />
             <LoadingPage />
           </Carousel>
