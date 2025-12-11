@@ -1,10 +1,13 @@
 import ShuffleIcon from "../assets/icons/Shuffle";
 import WrenchIcon from "../assets/icons/Wrench";
 import Footer from "../components/Footer";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Header from "../components/Header";
+import { useEffect, useRef } from "react";
 
 const Home = () => {
+  const location = useLocation();
+  const isInitialMount = useRef(true);
   const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
     eager: true,
   });
@@ -48,6 +51,19 @@ const Home = () => {
       "body": "Turn your skills and goals into a personalized roadmap toward the specialization you choose."
     }
   ];
+
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    if (location.hash === '#about') {
+      const element = document.getElementById('about');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   return (
     <>
@@ -102,7 +118,7 @@ const Home = () => {
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ml-16 mr-16 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ml-16 mr-16 mb-10" id="about">
             {items.map((item) => (
               <div className="flex items-start gap-3 p-4 bg-transparent shadow-none max-w-sm">
                 

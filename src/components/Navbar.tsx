@@ -9,7 +9,7 @@ const NavBar = () => {
       <NavLink to="/roadmaps" className="mb-9 pt-1 pb-1">
         Roadmaps
       </NavLink>
-      <NavLink to="/about" className="mb-9 pt-1 pb-1">
+      <NavLink to="/#about" className="mb-9 pt-1 pb-1">
         About
       </NavLink>
       <NavLink to="/dashboard">
