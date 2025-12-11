@@ -18,34 +18,34 @@ const Home = () => {
 
   const items = [
     {
-      "icon": "Search.png",
+      "icon": "Search.svg",
       "title": "Explore Career Roadmaps",
-      "body": "See the different ways people reach their goals. Discover careers that match\
-      your interests and find your own route forward"
+      "body": "Understand how people actually get into different fields, with multiple pathways for every career."
     },
     {
-      "icon": "List.png",
-      "title": "Track Your Progress",
-      "body": "See the different ways people reach their goals. Discover careers that match\
-      your interests and find your own route forward"
+      "icon": "List.svg",
+      "title": "Track your progress",
+      "body": "Understand what skills you already bring and move at your own pace."
     },
     {
-      "icon": "Key.png",
-      "title": "Find Your Niche",
-      "body": "See the different ways people reach their goals. Discover careers that match\
-      your interests and find your own route forward"
+      "icon": "Key.svg",
+      "title": "Find your path",
+      "body": "See which roadmap matches your goals, your strengths and where you're starting from."
     },
     {
-      "icon": "Globe.png",
-      "title": "Learn From Others",
-      "body": "See the different ways people reach their goals. Discover careers that match\
-      your interests and find your own route forward"
+      "icon": "Globe.svg",
+      "title": "Learn from others",
+      "body": "Read real journeys, tips, and lessons from people who chose the same path."
     },
     {
-      "icon": "Icon.png",
-      "title": "Give Career Advice",
-      "body": "See the different ways people reach their goals. Discover careers that match\
-      your interests and find your own route forward"
+      "icon": "Gift.svg",
+      "title": "Share your story",
+      "body": "Your insights and experience will make the platform more supportive"
+    },
+    {
+      "icon": "Info.svg",
+      "title": "Build your dashboard",
+      "body": "Turn your skills and goals into a personalized roadmap toward the specialization you choose."
     }
   ];
 
