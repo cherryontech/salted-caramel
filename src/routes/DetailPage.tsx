@@ -9,6 +9,7 @@ import ArrowIcon from "../assets/icons/Arrow";
 import WrenchIcon from "../assets/icons/Wrench";
 import ShuffleIcon from "../assets/icons/Shuffle";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 interface Specialization {
   image: string;
@@ -201,6 +202,7 @@ const DetailPage = () => {
           </div>
         </section>
 
+        <div className="flex justify-center items-center gap-[48px]">
         <div className="flex justify-center text-neutralblack">
           {" "}
           <NavLink to="/builddashboard">
@@ -221,13 +223,15 @@ const DetailPage = () => {
 
         <div className="flex justify-center text-neutralblack ml-2.5">
           <NavLink to="/roadmaps">
-            <button className="bg-blue-gradient pt-3 pr-3 pl-3 pb-2 rounded-lg flex gap-2 mb-15">
+            <button className="bg-blue-gradient pt-3 pr-3 pl-3 pb-1 rounded-lg flex gap-2 mb-15">
               <ShuffleIcon />
               <span className="mb-1 pr-1">Explore More Careers</span>
             </button>
           </NavLink>
         </div>
+        </div>
       </div>
+      <Footer/>
     </>
   );
 };

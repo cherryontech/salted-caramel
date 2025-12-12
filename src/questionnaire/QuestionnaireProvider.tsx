@@ -26,9 +26,15 @@ export type QuestionnaireState = {
   };
 };
 
+type QuestionnaireAction = 
+  | { type: "SET_CAREER"; payload: string }
+  | { type: "SET_SPECIALIZATION"; payload: string }
+  | { type: "SET_STATE"; payload: Partial<QuestionnaireState> };
+
 type QuestionnaireContextType = {
   state: QuestionnaireState;
   setState: React.Dispatch<React.SetStateAction<QuestionnaireState>>;
+  dispatch: (action: QuestionnaireAction) => void;
 };
 
 const QuestionnaireContext = createContext<
@@ -44,13 +50,29 @@ export const QuestionnaireProvider = ({
     loadQuestionnaire()
   );
 
+  const dispatch = (action: QuestionnaireAction) => {
+    switch (action.type) {
+      case "SET_CAREER":
+        setState((prev) => ({ ...prev, careerGoal: action.payload }));
+        break;
+      case "SET_SPECIALIZATION":
+        setState((prev) => ({ ...prev, specializationName: action.payload }));
+        break;
+      case "SET_STATE":
+        setState((prev) => ({ ...prev, ...action.payload }));
+        break;
+      default:
+        break;
+    }
+  };
+
   //   auto-save to localStorage whenever anything changes
   useEffect(() => {
     saveQuestionnaire(state);
   }, [state]);
 
   return (
-    <QuestionnaireContext.Provider value={{ state, setState }}>
+    <QuestionnaireContext.Provider value={{ state, setState, dispatch }}>
       {children}
     </QuestionnaireContext.Provider>
   );

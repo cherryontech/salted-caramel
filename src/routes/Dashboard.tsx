@@ -1,6 +1,7 @@
 import { useState, useEffect, type JSX } from "react";
 import Data from "../assets/data.json";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { useQuestionnaire } from "../questionnaire/QuestionnaireProvider";
 import type { QuestionnaireState } from "../questionnaire/QuestionnaireProvider";
 import Pencil from "../assets/icons/Pencil";
@@ -538,6 +539,7 @@ const Dashboard = () => {
           })}
         </div>
       </main>
+      <Footer/>
     </div>
   );
 };
