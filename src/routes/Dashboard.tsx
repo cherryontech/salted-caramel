@@ -14,6 +14,7 @@ import DownIcon from "../assets/icons/Down";
 import InProgressIcon from "../assets/icons/InProgress";
 import CompletedIcon from "../assets/icons/Completed";
 import NotStarted from "../assets/icons/NotStarted";
+import CheckIcon from "../assets/icons/Check";
 
 type IconName = "book" | "sun" | "trending" | "refresh";
 
@@ -270,6 +271,16 @@ const Dashboard = () => {
     setOpenMilestones((prev) => ({ ...prev, [value]: true }));
   };
 
+  // images
+  const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
+    eager: true,
+  });
+  const getImageSrc = (filename: string) => {
+    const path = `/src/assets/photos/${filename}`;
+    const imageModule = images[path] as { default: string } | undefined;
+    return imageModule?.default || "";
+  };
+
   return (
     <div>
       <Header />
@@ -324,6 +335,18 @@ const Dashboard = () => {
         {IconComponent && <IconComponent />}
         {state.careerLevel}
       </p>
+
+      <div className="flex justify-center">
+        <div className="w-[1160px]">
+          <div className="ml-100">
+            <img
+              src={getImageSrc("Illustration 1.svg")}
+              alt="An illustration of a girl with a backpack on a road starting her journey"
+              className="w-[374px] h-[316px]"
+            />
+          </div>
+        </div>
+      </div>
 
       <main className="p-12 mt-3 flex justify-center">
         <div className="w-[1160px]">
@@ -539,7 +562,43 @@ const Dashboard = () => {
           })}
         </div>
       </main>
-      <Footer/>
+      <div className="p-12 mt-3 flex justify-center">
+        <div className="w-[1160px]">
+          <div className="ml-100">
+            <img
+              src={getImageSrc("Illustration 2.svg")}
+              alt="An illustration of a girl with a backpack on a road coming back from her journey"
+              className="w-[375px] h-[276px]"
+            />
+          </div>
+          <div>
+            {state.selectedSkills.length > 0 && (
+              <section className="px-12 mt-8">
+                <h2 className="font-nunito font-extrabold text-[48px] mb-10">
+                  My Road So Far
+                </h2>
+                <h3 className="font-inter font-bold text-[25px] mb-7">
+                  {" "}
+                  Skills & Tools{" "}
+                </h3>
+
+                <div className="flex flex-wrap gap-10 mb-10">
+                  {state.selectedSkills.map((skill) => (
+                    <div
+                      key={skill}
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-gradient text-neutralblack font-inter text-[16px]"
+                    >
+                      <CheckIcon />
+                      <span>{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };
