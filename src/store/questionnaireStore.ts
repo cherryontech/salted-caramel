@@ -6,9 +6,10 @@ export const loadQuestionnaire = () => {
     : {
         name: "",
         icon: "",
-        careerGoal: "Web Design",
+        careerGoal: "",
+        careerGoalText: "",
         careerLevel: "",
-        fieldId: 1,
+        fieldId: null,
         specializationName: null,
         selectedSkills: [],
         userMilestones: {}, // empty by default

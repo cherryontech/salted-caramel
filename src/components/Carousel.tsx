@@ -18,7 +18,7 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
 
   // Next will only move if canProceedForCurrentStep is true
   const next = () => {
-    if (pagePosition < totalPages - 1) {
+    if (pagePosition < totalPages - 1 && canProceedForCurrentStep) {
       setPagePosition((p) => p + 1);
     }
   };
@@ -55,9 +55,9 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
         </div>
       </div>
       {!lastPage && (
-        <div className="flex justify-end gap-15 bottom-4">
+        <div className="flex justify-end">
           {/* DOTS */}
-          <div className="flex gap-3 mr-118 mt-2.5">
+          <div className="flex gap-3 mr-125 mt-2.5">
             {Array.from({ length: totalPages }).map((_, index) => (
               <div
                 key={index}
@@ -70,7 +70,7 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
             ))}
           </div>
           {/* NAV BUTTONS */}
-          <div className="mr-35 flex gap-4">
+          <div className="mr-30 flex gap-4">
             <button
               onClick={back}
               disabled={pagePosition === 0}
@@ -83,7 +83,7 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
             <button
               onClick={next}
               // disabled if on last page OR validation for this step fails
-              // disabled={!canProceedForCurrentStep}
+              disabled={!canProceedForCurrentStep}
               className={`bg-sage-gradient border rounded-md p-2 flex items-center gap-2 ${
                 !canProceedForCurrentStep ? "opacity-40 cursor-not-allowed" : ""
               }`}
