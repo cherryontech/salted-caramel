@@ -3,6 +3,26 @@ import { useState } from "react";
 import { useQuestionnaire } from "../QuestionnaireProvider";
 
 
+const specializationDisplayMap: Record<string, string> = {
+    "UX Designer": "UX Design",
+    "UI Designer": "UI Design",
+    "UX Researcher": "UX Research",
+    "Visual Designer": "Visual Design",
+    "Product Management": "Product Management",
+    "Technical Product Management": "Technical Product Management",
+    "AI / ML Product Management": "AI / ML Product Management",
+    "Cloud / Infrastructure Product Management":
+      "Cloud / Infrastructure Product Management",
+    "Full-stack Developer": "Full-stack Development",
+    "Mobile Developer": "Mobile Development",
+    "AI / ML Engineer": "AI / ML Engineering",
+    "Cloud Engineer": "Cloud Engineering",
+    "UX Writing / Content Design": "UX Writing / Content Design",
+    "Technical Content Development": "Technical Content Development",
+    "Content Strategy": "Content Strategy",
+    "Instructional Design": "Instructional Design",
+  };
+
 const getImageSrc = (filename: string) => {
     return `/src/assets/photos/${filename}`;
 };
@@ -62,7 +82,7 @@ const Specialization = () => {
 
                             <div>
                                 <h3 className={` gap-[24px] text-[24px] text-lg font-semibold object-contain ${isSelected ? "text-neutralblack" : "text-gray-900"}`}>
-                                    {spec.name}
+                                    {specializationDisplayMap[spec.name] || spec.name}
                                 </h3>
 
                                 <p className={`text-[15px] ${isSelected ? "text-black" : "text-gray-600"}`}>

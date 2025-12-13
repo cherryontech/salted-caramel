@@ -1,33 +1,37 @@
 
 import { useState } from "react";
 import { useQuestionnaire } from "../QuestionnaireProvider";
+import Data from "../../assets/data.json";
 
 
-const careerPath = [
-{ 
-    icon: "Book.svg",
-    career: "Web Design",
-    description: "Research, plan, and improve website apps based on user needs."
-}, 
-{ 
-    icon: "Upload.svg",
-    career: "Software Development",
-    description: "Design, program, build, deploy, and maintain software using different skills and tools."
-},
-{
-    icon: "Zap.svg",
-    career: "Product Management",
-    description: "Lead product strategy and execution, turning ideas into real customer solutions."
-},
-{
-    icon: "Refresh.svg",
-    career: "Content Development",
-    description: "Develop the actual content that people see on websites and print materials."
-}
-]
+const iconMap: Record<string, string> = {
+  "Web Design": "Book.svg",
+  "Software Development": "Upload.svg",
+  "Product Management": "Zap.svg",
+  "Content Development": "Refresh.svg"
+};
+
+const descMap: Record<string, string> = {
+  "Web Design": "Research, plan, and improve website apps based on user needs.",
+  "Software Development": "Design, program, build, deploy, and maintain software using different skills and tools.",
+  "Product Management": "Lead product strategy and execution, turning ideas into real customer solutions.",
+  "Content Development": "Develop the actual content that people see on websites and print materials."
+};
+
+const careerPath = Data.fields.map(field => ({
+  icon: iconMap[field.title] || "Book.svg", // fallback
+  career: field.title,
+  description: descMap[field.title] || "Explore this career path."
+}));
+
+const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
+    eager: true,
+  });
 
 const getImageSrc = (filename: string) => {
-    return `/src/assets/photos/${filename}`;
+   const path = `/src/assets/photos/${filename}`;
+   const imageModule = images[path] as { default: string } | undefined;
+   return imageModule?.default || "";
 };
 
 
@@ -37,7 +41,11 @@ const BuildYourDashboard = () => {
     
     const handleSelect = (career: string) => {
         setSelectedCareer(career);
-        dispatch({type: "SET_CAREER", payload: career});
+        const field = Data.fields.find(f => f.title === career);
+        if (field) {
+            dispatch({type: "SET_CAREER", payload: career});
+            dispatch({type: "SET_FIELD_ID", payload: field.id});
+        }
     };
 
     return(

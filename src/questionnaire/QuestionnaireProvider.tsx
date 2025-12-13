@@ -29,6 +29,7 @@ export type QuestionnaireState = {
 type QuestionnaireAction = 
   | { type: "SET_CAREER"; payload: string }
   | { type: "SET_SPECIALIZATION"; payload: string }
+  | { type: "SET_FIELD_ID"; payload: number }
   | { type: "SET_STATE"; payload: Partial<QuestionnaireState> };
 
 type QuestionnaireContextType = {
@@ -57,6 +58,9 @@ export const QuestionnaireProvider = ({
         break;
       case "SET_SPECIALIZATION":
         setState((prev) => ({ ...prev, specializationName: action.payload }));
+        break;
+      case "SET_FIELD_ID":
+        setState((prev) => ({ ...prev, fieldId: action.payload }));
         break;
       case "SET_STATE":
         setState((prev) => ({ ...prev, ...action.payload }));
