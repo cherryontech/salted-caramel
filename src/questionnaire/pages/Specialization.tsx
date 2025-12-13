@@ -21,10 +21,16 @@ const specializationDisplayMap: Record<string, string> = {
     "Technical Content Development": "Technical Content Development",
     "Content Strategy": "Content Strategy",
     "Instructional Design": "Instructional Design",
-  };
+};
+
+const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
+    eager: true,
+  });
 
 const getImageSrc = (filename: string) => {
-    return `/src/assets/photos/${filename}`;
+    const path = `/src/assets/photos/${filename}`;
+    const imageModule = images[path] as { default: string } | undefined;
+    return imageModule?.default || "";
 };
 
 const Specialization = () => {
