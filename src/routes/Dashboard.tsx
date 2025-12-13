@@ -280,6 +280,15 @@ const Dashboard = () => {
     const imageModule = images[path] as { default: string } | undefined;
     return imageModule?.default || "";
   };
+  //  skills to render
+
+  const defaultTechnicalSkills = selectedField?.technicalSkills ?? [];
+  const defaultSoftSkills = selectedField?.softSkills ?? [];
+
+  const skillsToShow =
+    state.selectedSkills && state.selectedSkills.length > 0
+      ? state.selectedSkills
+      : [...defaultSoftSkills, ...defaultTechnicalSkills];
 
   return (
     <div>
@@ -572,29 +581,26 @@ const Dashboard = () => {
             />
           </div>
           <div>
-            {state.selectedSkills.length > 0 && (
-              <section className="px-12 mt-8">
-                <h2 className="font-nunito font-extrabold text-[48px] mb-10">
-                  My Road So Far
-                </h2>
-                <h3 className="font-inter font-bold text-[25px] mb-7">
-                  {" "}
-                  Skills & Tools{" "}
-                </h3>
+            <section className="px-12 mt-8">
+              <h2 className="font-nunito font-extrabold text-[48px] mb-10">
+                My Road So Far
+              </h2>
+              <h3 className="font-inter font-bold text-[25px] mb-7">
+                Skills & Tools
+              </h3>
 
-                <div className="flex flex-wrap gap-10 mb-10">
-                  {state.selectedSkills.map((skill) => (
-                    <div
-                      key={skill}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-gradient text-neutralblack font-inter text-[16px]"
-                    >
-                      <CheckIcon />
-                      <span>{skill}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )}
+              <div className="flex flex-wrap gap-10 mb-10">
+                {skillsToShow.map((skill) => (
+                  <div
+                    key={skill}
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-gradient text-neutralblack font-inter text-[16px]"
+                  >
+                    <CheckIcon />
+                    <span>{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
           </div>
         </div>
       </div>
