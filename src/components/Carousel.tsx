@@ -83,7 +83,7 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
             <button
               onClick={next}
               // disabled if on last page OR validation for this step fails
-              // disabled={!canProceedForCurrentStep}
+              disabled={!canProceedForCurrentStep}
               className={`bg-sage-gradient border rounded-md p-2 flex items-center gap-2 ${
                 !canProceedForCurrentStep ? "opacity-40 cursor-not-allowed" : ""
               }`}
