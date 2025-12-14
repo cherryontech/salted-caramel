@@ -32,7 +32,15 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
             state?.careerLevel &&
             state.careerLevel !== ""
         );
-      case 1: // Skills
+      case 1: // Build Your Dashboard
+        return Boolean(
+          state?.careerGoal && state.careerGoal !== ""
+        );
+      case 2: // Specialization
+        return Boolean(
+          state?.specializationName && state.specializationName !== ""
+        );
+      case 3: // Skills
         return Boolean(
           state?.selectedSkills &&
             Array.isArray(state.selectedSkills) &&
@@ -45,8 +53,23 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
 
   const lastPage = pagePosition === totalPages - 1;
 
+  // determines if Skip is allowed
+  const canSkip = () => {
+    return pagePosition > 0 && pagePosition < totalPages - 1;
+  };
+
+  // moves forward one pag, ignoring validation
+  const skip = () => {
+    if (canSkip()) {
+      setPagePosition((p) => p + 1);
+    }
+  }
+
   const slides = Children.toArray(children);
   return (
+    <>
+    
+
     <div className="relative w-full flex flex-col justify-between gap-10 min-h-[40vh]">
       {/* Slide/Page Info */}
       <div className="flex-1 overflow-hidden relative">
@@ -55,8 +78,10 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
         </div>
       </div>
       {!lastPage && (
+
         <div className="flex justify-end gap-15 bottom-4">
-          {/* DOTS */}
+          
+          {/*  DOTS */}
           <div className="flex gap-3 mr-118 mt-2.5">
             {Array.from({ length: totalPages }).map((_, index) => (
               <div
@@ -69,7 +94,17 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
               />
             ))}
           </div>
+          
+
           {/* NAV BUTTONS */}
+          <button onClick={skip} 
+            disabled={!canSkip()}
+            className="flex items-center gap-2"
+          >
+            Skip
+            <RightArrowIcon/>
+          </button>
+         
           <div className="mr-35 flex gap-4">
             <button
               onClick={back}
@@ -96,6 +131,7 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
         </div>
       )}
     </div>
+    </>
   );
 };
 
