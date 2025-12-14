@@ -1,23 +1,35 @@
 import { useQuestionnaire } from "../QuestionnaireProvider";
+import { useEffect } from "react";
 import Data from "../../assets/data.json";
 import CheckIcon from "../../assets/icons/Check";
 
 const SkillsPage = () => {
   const { state, setState } = useQuestionnaire();
 
-  //  showing default details for now, will use other data once prev pages created
-  const fieldId = state.fieldId ?? 1;
-  // const specializationName = state.specializationName ?? "UX Designer";
+  const defaultSkills = ["Add a skill", "Add a skill", "Add a skill"];
+
+  const fieldId = state.fieldId;
+
+  useEffect(() => {
+    if (!fieldId) return;
+
+    setState((prev) => ({
+      ...prev,
+      selectedSkills: [],
+    }));
+  }, [fieldId, setState]);
 
   const field = Data.fields.find((f) => f.id === fieldId);
-  // const specialization = field?.specializations.find(
-  //   (s) => s.name === specializationName
-  // );
 
-  const technicalSkills = field?.technicalSkills ?? [];
-  const softSkills = field?.softSkills ?? [];
+  const milestoneSkills = field?.milestonesSkills;
+
+  const hardSkills = milestoneSkills?.hardSkills ?? [];
+  const softSkills = milestoneSkills?.softSkills ?? [];
+  const expProjects = milestoneSkills?.expProjects ?? [];
 
   const toggleSkill = (skill: string) => {
+    if (defaultSkills.includes(skill)) return; // placeholder skills do nothing
+
     setState((prev) => {
       const alreadySelected = prev.selectedSkills?.includes(skill);
 
@@ -39,13 +51,16 @@ const SkillsPage = () => {
     return imageModule?.default || "";
   };
 
+  // Combine skills or fallback to defaults
+  const skillsToShow = [...hardSkills, ...softSkills, ...expProjects];
+
   return (
     <div className="flex ml-15 gap-28">
       {/* LEFT CONTENT */}
-      <aside>
+      <aside className="mt-5">
         <img
           src={getImageSrc("Allura - Trophy 1.svg")}
-          alt=""
+          alt="Gold colored trophy"
           className="w-[327px] h-[270px]"
         />
         <p className="text-sm text-gray-700 px-3 text-center mt-4 text-[20px] text-left">
@@ -64,23 +79,23 @@ const SkillsPage = () => {
           Do you have any of these skills or experiences already?
         </h2>
 
-        <div className="flex flex-wrap gap-y-[25px] gap-x-[35px] max-w-[800px] justify-left mt-15 font-inter text-[16px]">
-          {[...technicalSkills, ...softSkills].map((skill) => {
+        <div className="flex flex-wrap gap-y-[55px] gap-x-[40px] max-w-[800px] justify-left mt-13 font-inter text-[16px]">
+          {skillsToShow.map((skill, index) => {
             const selected = state.selectedSkills?.includes(skill);
 
             return (
               <button
-                key={skill}
+                key={skill + index}
                 onClick={() => toggleSkill(skill)}
                 className={`
-          flex items-center gap-2 px-4 py-2 rounded-lg text-sm border border-blue
-          ${
-            selected
-              ? "bg-sage-gradient text-neutralblack"
-              : "bg-white text-neutralblack"
-          }
-          hover:shadow-sm
-        `}
+                  flex items-center gap-2 px-4 py-2 rounded-lg text-sm border border-blue
+                  ${
+                    selected
+                      ? "bg-sage-gradient text-neutralblack"
+                      : "bg-white text-neutralblack"
+                  }
+                  hover:shadow-sm
+                `}
               >
                 {selected && <CheckIcon />}
                 {skill}

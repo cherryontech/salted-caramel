@@ -14,6 +14,7 @@ import DownIcon from "../assets/icons/Down";
 import InProgressIcon from "../assets/icons/InProgress";
 import CompletedIcon from "../assets/icons/Completed";
 import NotStarted from "../assets/icons/NotStarted";
+import CheckIcon from "../assets/icons/Check";
 
 type IconName = "book" | "sun" | "trending" | "refresh";
 
@@ -150,7 +151,9 @@ const Dashboard = () => {
 
   const hasField = !!state.fieldId;
   const hasSpec = !!state.specializationName;
-  const hasTypedGoal = state.careerGoal.trim().length > 0;
+  const hasTypedGoal =
+    typeof state.careerGoalText === "string" &&
+    state.careerGoalText.trim().length > 0;
 
   // renamed names at career field
   const fieldDisplayNameMap: Record<string, string> = {
@@ -194,7 +197,7 @@ const Dashboard = () => {
   let goalSentence: JSX.Element | string = "";
 
   if (hasTypedGoal) {
-    goalSentence = <>My career goal is to {state.careerGoal}.</>;
+    goalSentence = <>My career goal is to {state.careerGoalText}.</>;
   } else if (hasField && hasSpec) {
     goalSentence = (
       <>
@@ -270,6 +273,43 @@ const Dashboard = () => {
     setOpenMilestones((prev) => ({ ...prev, [value]: true }));
   };
 
+  // images
+  const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
+    eager: true,
+  });
+  const getImageSrc = (filename: string) => {
+    const path = `/src/assets/photos/${filename}`;
+    const imageModule = images[path] as { default: string } | undefined;
+    return imageModule?.default || "";
+  };
+  //  skills to render
+
+  const defaultTechnicalSkills = selectedField?.technicalSkills ?? [];
+  const defaultSoftSkills = selectedField?.softSkills ?? [];
+  const defaultEmptySkills = [
+    "Add a skill",
+    "Add a skill",
+    "Add a skill",
+    "Add a skill",
+    "Add a skill",
+    "Add a skill",
+  ];
+
+  let skillsToShow: string[] = [];
+
+  if (state.selectedSkills && state.selectedSkills.length > 0) {
+    // 1️⃣ User has selected skills
+    skillsToShow = state.selectedSkills;
+  } else if (fieldId) {
+    // 2️⃣ User has chosen a career field (but no skills selected)
+    skillsToShow = [...defaultTechnicalSkills, ...defaultSoftSkills];
+    // fallback to empty skills if no technical/soft skills exist
+    if (skillsToShow.length === 0) skillsToShow = defaultEmptySkills;
+  } else {
+    // 3️⃣ User skipped everything
+    skillsToShow = defaultEmptySkills;
+  }
+
   return (
     <div>
       <Header />
@@ -289,7 +329,7 @@ const Dashboard = () => {
               <span
                 onClick={() => {
                   setIsEditingGoal(true);
-                  setTempGoal(state.careerGoal || "");
+                  setTempGoal(state.careerGoalText || "");
                 }}
                 className="cursor-pointer ml-3"
               >
@@ -308,7 +348,7 @@ const Dashboard = () => {
               />
               <button
                 onClick={() => {
-                  setState((prev) => ({ ...prev, careerGoal: tempGoal }));
+                  setState((prev) => ({ ...prev, careerGoalText: tempGoal }));
                   setIsEditingGoal(false);
                 }}
                 className="font-bold text-gray-700"
@@ -324,6 +364,18 @@ const Dashboard = () => {
         {IconComponent && <IconComponent />}
         {state.careerLevel}
       </p>
+
+      <div className="flex justify-center">
+        <div className="w-[1160px]">
+          <div className="ml-100">
+            <img
+              src={getImageSrc("Illustration 1.svg")}
+              alt="An illustration of a girl with a backpack on a road starting her journey"
+              className="w-[374px] h-[316px]"
+            />
+          </div>
+        </div>
+      </div>
 
       <main className="p-12 mt-3 flex justify-center">
         <div className="w-[1160px]">
@@ -539,7 +591,50 @@ const Dashboard = () => {
           })}
         </div>
       </main>
-      <Footer/>
+      <div className="p-12 mt-3 flex justify-center">
+        <div className="w-[1160px]">
+          <div className="ml-100">
+            <img
+              src={getImageSrc("Illustration 2.svg")}
+              alt="An illustration of a girl with a backpack on a road coming back from her journey"
+              className="w-[375px] h-[276px]"
+            />
+          </div>
+          <div>
+            <section className="px-12 mt-8">
+              <h2 className="font-nunito font-extrabold text-[48px] mb-10">
+                My Road So Far
+              </h2>
+              <h3 className="font-inter font-bold text-[25px] mb-7">
+                Skills & Tools
+              </h3>
+              <div className="flex flex-wrap gap-10 mb-10">
+                {skillsToShow.map((skill, index) => {
+                  const isSelected = state.selectedSkills?.includes(skill);
+                  const isPlaceholder = defaultEmptySkills.includes(skill);
+
+                  return (
+                    <div
+                      key={skill + index}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg font-inter text-[16px] ${
+                        isSelected
+                          ? "bg-sage-gradient text-neutralblack"
+                          : isPlaceholder
+                          ? "bg-white text-gray-500"
+                          : "bg-white text-neutralblack"
+                      }`}
+                    >
+                      {!isPlaceholder && isSelected && <CheckIcon />}
+                      {skill}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };

@@ -7,6 +7,7 @@ export const loadQuestionnaire = () => {
         name: "",
         icon: "",
         careerGoal: "",
+        careerGoalText: "",
         careerLevel: "",
         fieldId: null,
         specializationName: null,

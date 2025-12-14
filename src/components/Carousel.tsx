@@ -33,9 +33,7 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
             state.careerLevel !== ""
         );
       case 1: // Build Your Dashboard
-        return Boolean(
-          state?.careerGoal && state.careerGoal !== ""
-        );
+        return Boolean(state?.careerGoal && state.careerGoal !== "");
       case 2: // Specialization
         return Boolean(
           state?.specializationName && state.specializationName !== ""
@@ -63,13 +61,11 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
     if (canSkip()) {
       setPagePosition((p) => p + 1);
     }
-  }
+  };
 
   const slides = Children.toArray(children);
-  return (
-    <>
-    
 
+  return (
     <div className="relative w-full flex flex-col justify-between gap-10 min-h-[40vh]">
       {/* Slide/Page Info */}
       <div className="flex-1 overflow-hidden relative">
@@ -77,12 +73,11 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
           <div className="w-full h-full">{slides[pagePosition]}</div>
         </div>
       </div>
-      {!lastPage && (
 
-        <div className="flex justify-end gap-15 bottom-4">
-          
-          {/*  DOTS */}
-          <div className="flex gap-3 mr-118 mt-2.5">
+      {!lastPage && (
+        <div className="flex justify-end items-center gap-8 bottom-4 mr-40">
+          {/* DOTS */}
+          <div className="flex gap-3 mt-2.5 mr-20">
             {Array.from({ length: totalPages }).map((_, index) => (
               <div
                 key={index}
@@ -94,18 +89,17 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
               />
             ))}
           </div>
-          
 
-          {/* NAV BUTTONS */}
-          <button onClick={skip} 
-            disabled={!canSkip()}
-            className="flex items-center gap-2"
-          >
-            Skip
-            <RightArrowIcon/>
-          </button>
-         
-          <div className="mr-35 flex gap-4">
+          {/* SKIP */}
+          <div className="mr-3">
+            <button onClick={skip} disabled={!canSkip()} className="flex gap-2">
+              Skip
+              <RightArrowIcon />
+            </button>
+          </div>
+
+          {/* BACK / NEXT */}
+          <div className="flex gap-4 ml-60">
             <button
               onClick={back}
               disabled={pagePosition === 0}
@@ -117,7 +111,6 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
 
             <button
               onClick={next}
-              // disabled if on last page OR validation for this step fails
               disabled={!canProceedForCurrentStep}
               className={`bg-sage-gradient border rounded-md p-2 flex items-center gap-2 ${
                 !canProceedForCurrentStep ? "opacity-40 cursor-not-allowed" : ""
@@ -131,7 +124,6 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
         </div>
       )}
     </div>
-    </>
   );
 };
 
