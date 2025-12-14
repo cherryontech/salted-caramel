@@ -75,9 +75,9 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
       </div>
 
       {!lastPage && (
-        <div className="flex justify-end items-center gap-8 bottom-4">
+        <div className="flex justify-end items-center gap-8 bottom-4 mr-40">
           {/* DOTS */}
-          <div className="flex gap-3 mt-2.5">
+          <div className="flex gap-3 mt-2.5 mr-20">
             {Array.from({ length: totalPages }).map((_, index) => (
               <div
                 key={index}
@@ -91,17 +91,15 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
           </div>
 
           {/* SKIP */}
-          <button
-            onClick={skip}
-            disabled={!canSkip()}
-            className="flex items-center gap-2"
-          >
-            Skip
-            <RightArrowIcon />
-          </button>
+          <div className="mr-3">
+            <button onClick={skip} disabled={!canSkip()} className="flex gap-2">
+              Skip
+              <RightArrowIcon />
+            </button>
+          </div>
 
           {/* BACK / NEXT */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 ml-60">
             <button
               onClick={back}
               disabled={pagePosition === 0}
