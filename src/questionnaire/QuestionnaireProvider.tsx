@@ -9,6 +9,7 @@ export type QuestionnaireState = {
   icon: string;
   careerGoal: string;
   careerLevel: string;
+  careerGoalText: string;
   fieldId: number | null;
   specializationName: string | null;
   selectedSkills: string[];
@@ -26,7 +27,7 @@ export type QuestionnaireState = {
   };
 };
 
-type QuestionnaireAction = 
+type QuestionnaireAction =
   | { type: "SET_CAREER"; payload: string }
   | { type: "SET_SPECIALIZATION"; payload: string }
   | { type: "SET_FIELD_ID"; payload: number }

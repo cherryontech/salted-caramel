@@ -6,6 +6,8 @@ import CheckIcon from "../../assets/icons/Check";
 const SkillsPage = () => {
   const { state, setState } = useQuestionnaire();
 
+  const defaultSkills = ["Add a skill", "Add a skill", "Add a skill"];
+
   const fieldId = state.fieldId;
 
   useEffect(() => {
@@ -26,6 +28,8 @@ const SkillsPage = () => {
   const expProjects = milestoneSkills?.expProjects ?? [];
 
   const toggleSkill = (skill: string) => {
+    if (defaultSkills.includes(skill)) return; // placeholder skills do nothing
+
     setState((prev) => {
       const alreadySelected = prev.selectedSkills?.includes(skill);
 
@@ -46,6 +50,9 @@ const SkillsPage = () => {
     const imageModule = images[path] as { default: string } | undefined;
     return imageModule?.default || "";
   };
+
+  // Combine skills or fallback to defaults
+  const skillsToShow = [...hardSkills, ...softSkills, ...expProjects];
 
   return (
     <div className="flex ml-15 gap-28">
@@ -73,22 +80,22 @@ const SkillsPage = () => {
         </h2>
 
         <div className="flex flex-wrap gap-y-[55px] gap-x-[40px] max-w-[800px] justify-left mt-13 font-inter text-[16px]">
-          {[...hardSkills, ...softSkills, ...expProjects].map((skill) => {
+          {skillsToShow.map((skill, index) => {
             const selected = state.selectedSkills?.includes(skill);
 
             return (
               <button
-                key={skill}
+                key={skill + index}
                 onClick={() => toggleSkill(skill)}
                 className={`
-          flex items-center gap-2 px-4 py-2 rounded-lg text-sm border border-blue
-          ${
-            selected
-              ? "bg-sage-gradient text-neutralblack"
-              : "bg-white text-neutralblack"
-          }
-          hover:shadow-sm
-        `}
+                  flex items-center gap-2 px-4 py-2 rounded-lg text-sm border border-blue
+                  ${
+                    selected
+                      ? "bg-sage-gradient text-neutralblack"
+                      : "bg-white text-neutralblack"
+                  }
+                  hover:shadow-sm
+                `}
               >
                 {selected && <CheckIcon />}
                 {skill}

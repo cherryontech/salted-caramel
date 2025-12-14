@@ -4,25 +4,22 @@ import Data from "../../assets/data.json";
 
 const iconMap: Record<string, string> = {
   "Web Design": "Book.svg",
-  "Software Development": "Upload.svg",
+  "Software Developer": "Upload.svg",
   "Product Management": "Zap.svg",
-  "Content Development": "Refresh.svg",
+  "Content Developer": "Refresh.svg",
 };
 
-const descMap: Record<string, string> = {
-  "Web Design": "Research, plan, and improve website apps based on user needs.",
-  "Software Development":
-    "Design, program, build, deploy, and maintain software using different skills and tools.",
-  "Product Management":
-    "Lead product strategy and execution, turning ideas into real customer solutions.",
-  "Content Development":
-    "Develop the actual content that people see on websites and print materials.",
+const displayNameMap: Record<string, string> = {
+  "Software Developer": "Software Development",
+  "Content Developer": "Content Development",
+  "Web Design": "Web Design",
+  "Product Management": "Product Management",
 };
 
 const careerPath = Data.fields.map((field) => ({
-  icon: iconMap[field.title] || "Book.svg", // fallback
+  icon: iconMap[field.title] || "Book.svg",
   career: field.title,
-  description: descMap[field.title] || "Explore this career path.",
+  description: field.description || "Explore this career path.",
 }));
 
 const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
@@ -101,7 +98,7 @@ const BuildYourDashboard = () => {
                       isSelected ? "text-neutralblack" : "text-gray-900"
                     }`}
                   >
-                    {item.career}
+                    {displayNameMap[item.career] ?? item.career}
                   </h3>
 
                   <p

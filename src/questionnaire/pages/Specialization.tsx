@@ -1,6 +1,10 @@
 import Data from "../../assets/data.json";
 import { useState } from "react";
 import { useQuestionnaire } from "../QuestionnaireProvider";
+import Clock2Icon from "../../assets/icons/Clock2";
+import SunIcon from "../../assets/icons/Sun";
+import VideoIcon from "../../assets/icons/Video";
+import RefreshIcon from "../../assets/icons/Refresh";
 
 const specializationDisplayMap: Record<string, string> = {
   "UX Designer": "UX Design",
@@ -22,6 +26,8 @@ const specializationDisplayMap: Record<string, string> = {
   "Instructional Design": "Instructional Design",
 };
 
+const fixedIcons = [Clock2Icon, SunIcon, VideoIcon, RefreshIcon];
+
 const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
   eager: true,
 });
@@ -42,7 +48,7 @@ const Specialization = () => {
     (field) => field.title === selectedCareer
   );
 
-  const specializations = careerField?.specializations || [];
+  const specializations = careerField?.specializations.slice(0, 4) || [];
 
   const handleSelectSpec = (specName: string) => {
     setSelectedSpec(specName);
@@ -55,7 +61,7 @@ const Specialization = () => {
       <div className="flex flex-col">
         <img
           src={getImageSrc("Specializations.svg")}
-          alt=""
+          alt="Illustration of lightbulb lit up"
           className="self-stretch h-[304.751px]"
         />
 
@@ -75,38 +81,39 @@ const Specialization = () => {
         </p>
 
         <div className="mt-8 space-y-4">
-          {specializations.map((spec) => {
+          {specializations.map((spec, index) => {
             const isSelected = selectedSpec === spec.name;
+            const Icon = fixedIcons[index];
 
             return (
               <button
                 key={spec.name}
                 onClick={() => handleSelectSpec(spec.name)}
-                className={`w-full object-contain text-left border rounded-xl p-6 flex items-start gap-4 
-                        transition-all duration-150 ${
-                          isSelected
-                            ? "bg-sage-gradient border-primaryGreen text-neutralblack"
-                            : "bg-white border-gray-300 hover:bg-salmon-gradient"
-                        }
-                        `}
+                className={`w-full text-left border rounded-xl p-6 flex items-center gap-4 
+          transition-all duration-150 ${
+            isSelected
+              ? "bg-sage-gradient border-primaryGreen text-neutralblack"
+              : "bg-white border-gray-300 hover:bg-salmon-gradient"
+          }`}
               >
-                <img
-                  src={getImageSrc(spec.image)}
-                  alt={`item.icon`}
-                  className="w-[120px] h-[120px] object-contain"
-                />
+                {/* Icon Container */}
+                {Icon && (
+                  <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
+                    <Icon />
+                  </div>
+                )}
 
-                <div>
+                {/* Text */}
+                <div className="flex-1">
                   <h3
-                    className={` gap-[24px] text-[24px] text-lg font-semibold object-contain ${
+                    className={`text-lg font-semibold ${
                       isSelected ? "text-neutralblack" : "text-gray-900"
                     }`}
                   >
                     {specializationDisplayMap[spec.name] || spec.name}
                   </h3>
-
                   <p
-                    className={`text-[15px] ${
+                    className={`text-sm ${
                       isSelected ? "text-black" : "text-gray-600"
                     }`}
                   >

@@ -151,7 +151,9 @@ const Dashboard = () => {
 
   const hasField = !!state.fieldId;
   const hasSpec = !!state.specializationName;
-  const hasTypedGoal = state.careerGoal.trim().length > 0;
+  const hasTypedGoal =
+    typeof state.careerGoalText === "string" &&
+    state.careerGoalText.trim().length > 0;
 
   // renamed names at career field
   const fieldDisplayNameMap: Record<string, string> = {
@@ -195,7 +197,7 @@ const Dashboard = () => {
   let goalSentence: JSX.Element | string = "";
 
   if (hasTypedGoal) {
-    goalSentence = <>My career goal is to {state.careerGoal}.</>;
+    goalSentence = <>My career goal is to {state.careerGoalText}.</>;
   } else if (hasField && hasSpec) {
     goalSentence = (
       <>
@@ -284,11 +286,29 @@ const Dashboard = () => {
 
   const defaultTechnicalSkills = selectedField?.technicalSkills ?? [];
   const defaultSoftSkills = selectedField?.softSkills ?? [];
+  const defaultEmptySkills = [
+    "Add a skill",
+    "Add a skill",
+    "Add a skill",
+    "Add a skill",
+    "Add a skill",
+    "Add a skill",
+  ];
 
-  const skillsToShow =
-    state.selectedSkills && state.selectedSkills.length > 0
-      ? state.selectedSkills
-      : [...defaultSoftSkills, ...defaultTechnicalSkills];
+  let skillsToShow: string[] = [];
+
+  if (state.selectedSkills && state.selectedSkills.length > 0) {
+    // 1️⃣ User has selected skills
+    skillsToShow = state.selectedSkills;
+  } else if (fieldId) {
+    // 2️⃣ User has chosen a career field (but no skills selected)
+    skillsToShow = [...defaultTechnicalSkills, ...defaultSoftSkills];
+    // fallback to empty skills if no technical/soft skills exist
+    if (skillsToShow.length === 0) skillsToShow = defaultEmptySkills;
+  } else {
+    // 3️⃣ User skipped everything
+    skillsToShow = defaultEmptySkills;
+  }
 
   return (
     <div>
@@ -309,7 +329,7 @@ const Dashboard = () => {
               <span
                 onClick={() => {
                   setIsEditingGoal(true);
-                  setTempGoal(state.careerGoal || "");
+                  setTempGoal(state.careerGoalText || "");
                 }}
                 className="cursor-pointer ml-3"
               >
@@ -328,7 +348,7 @@ const Dashboard = () => {
               />
               <button
                 onClick={() => {
-                  setState((prev) => ({ ...prev, careerGoal: tempGoal }));
+                  setState((prev) => ({ ...prev, careerGoalText: tempGoal }));
                   setIsEditingGoal(false);
                 }}
                 className="font-bold text-gray-700"
@@ -588,17 +608,27 @@ const Dashboard = () => {
               <h3 className="font-inter font-bold text-[25px] mb-7">
                 Skills & Tools
               </h3>
-
               <div className="flex flex-wrap gap-10 mb-10">
-                {skillsToShow.map((skill) => (
-                  <div
-                    key={skill}
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-gradient text-neutralblack font-inter text-[16px]"
-                  >
-                    <CheckIcon />
-                    <span>{skill}</span>
-                  </div>
-                ))}
+                {skillsToShow.map((skill, index) => {
+                  const isSelected = state.selectedSkills?.includes(skill);
+                  const isPlaceholder = defaultEmptySkills.includes(skill);
+
+                  return (
+                    <div
+                      key={skill + index}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg font-inter text-[16px] ${
+                        isSelected
+                          ? "bg-sage-gradient text-neutralblack"
+                          : isPlaceholder
+                          ? "bg-white text-gray-500"
+                          : "bg-white text-neutralblack"
+                      }`}
+                    >
+                      {!isPlaceholder && isSelected && <CheckIcon />}
+                      {skill}
+                    </div>
+                  );
+                })}
               </div>
             </section>
           </div>
