@@ -2,8 +2,34 @@ import Data from "../../assets/data.json";
 import { useState } from "react";
 import { useQuestionnaire } from "../QuestionnaireProvider";
 
+const specializationDisplayMap: Record<string, string> = {
+  "UX Designer": "UX Design",
+  "UI Designer": "UI Design",
+  "UX Researcher": "UX Research",
+  "Visual Designer": "Visual Design",
+  "Product Management": "Product Management",
+  "Technical Product Management": "Technical Product Management",
+  "AI / ML Product Management": "AI / ML Product Management",
+  "Cloud / Infrastructure Product Management":
+    "Cloud / Infrastructure Product Management",
+  "Full-stack Developer": "Full-stack Development",
+  "Mobile Developer": "Mobile Development",
+  "AI / ML Engineer": "AI / ML Engineering",
+  "Cloud Engineer": "Cloud Engineering",
+  "UX Writing / Content Design": "UX Writing / Content Design",
+  "Technical Content Development": "Technical Content Development",
+  "Content Strategy": "Content Strategy",
+  "Instructional Design": "Instructional Design",
+};
+
+const images = import.meta.glob("/src/assets/photos/*.{png,jpg,jpeg,svg}", {
+  eager: true,
+});
+
 const getImageSrc = (filename: string) => {
-  return `/src/assets/photos/${filename}`;
+  const path = `/src/assets/photos/${filename}`;
+  const imageModule = images[path] as { default: string } | undefined;
+  return imageModule?.default || "";
 };
 
 const Specialization = () => {
@@ -76,7 +102,7 @@ const Specialization = () => {
                       isSelected ? "text-neutralblack" : "text-gray-900"
                     }`}
                   >
-                    {spec.name}
+                    {specializationDisplayMap[spec.name] || spec.name}
                   </h3>
 
                   <p
