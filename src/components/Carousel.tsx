@@ -18,7 +18,7 @@ const Carousel: React.FC<Carousel> = ({ children }) => {
 
   // Next will only move if canProceedForCurrentStep is true
   const next = () => {
-    if (pagePosition < totalPages - 1) {
+    if (pagePosition < totalPages - 1 && canProceedForCurrentStep) {
       setPagePosition((p) => p + 1);
     }
   };
